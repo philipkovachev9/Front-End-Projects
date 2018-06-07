@@ -7,5 +7,39 @@ body {
     margin: 0px auto;
     width: 970px;
     height: 750px;
-    background-color: #FFFFFF;    
+    background-color: #FFFFFF;
+}
+
+img {
+    height: 150px;
+    width: 180px;
+}
+
+.header {
+    float: right;
+    margin: 5px;
+}
+
+.quote {
+    padding: 10px;
+}
+
+ul {
+    color: #9FBD38;
+}
+
+li {
+    display: inline-block;
+    padding: 15px;
+}
+
+#social {
+    float: right;
+    padding: 15px;
+}
+
+i {
+    font-size: 25px;
+    padding: 5px;
+    margin-right: 20px;
 }
