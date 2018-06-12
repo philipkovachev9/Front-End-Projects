@@ -1,16 +1,17 @@
 body {
     background-color: #F5F2D3;
     margin: 0;
+    font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #page {
     margin: 0px auto;
     width: 970px;
-    height: 774px;
+    height: 800px;
     background-color: #FFFFFF;
 }
 
-img {
+.logo {
     height: 150px;
     width: 180px;
 }
@@ -47,7 +48,7 @@ i {
 #navigation {
     border-top: solid 1px #DADADA;
     border-bottom: solid 1px #DADADA;
-    margin-top:60px;
+    margin-top: 60px;
     padding: 15px;
     text-align: center;
 }
@@ -58,10 +59,16 @@ a {
     text-decoration: none;
     text-transform: uppercase;
     color: black;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 a:hover {
-   background-color: #E6E6E6;
+    background-color: #E6E6E6;
+}
+
+i:hover {
+    cursor: pointer;
 }
 
 #footer {
