@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Green Iguana Foundation</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
 </head>
-
 <body>
     <div id="page">
         <img src="images/logo.jpg" alt="logo picture" class="logo">
         <div class="header">
-            <ul>
+            <ul class="slogans">
                 <li>Conservation</li>
                 <li>Awareness</li>
                 <li>Proper Information</li>
@@ -23,18 +23,35 @@
                 <i class="fab fa-linkedin"></i>
             </div>
         </div>
-        <div id="navigation">
-            <a href="">Home</a>
-            <a href="pages/about.html">Who are we</a>
-            <a href="">Raising in captivity</a>
-            <a href="pages/habitat.html">Habitat</a>
-        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./pages/about.html">Who are we</a>
+                </li>
+                <li>
+                    <a href="./pages/habitat.html">Habitat</a>
+                </li>
+                <li id="menu">
+                    <a href="#">Raising in Captivity</a>
+                    <ul id="dropdown">
+                        <li>
+                            <a href="./pages/tempandhum.html">Temperature and Humidity</a>
+                        </li>
+                        <li>
+                            <a href="./pages/diet.html">Diet</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
         <img src="images/green-iguana.jpg" class="iguana" alt="picture of a green iguana">
         <div id="footer">
-            <span>Copyright Green Iguana Foundation © 2018</span>
+            <span>Copyright Green Iguana Foundation &copy; 2018</span>
         </div>
     </div>
-
     <script src="scripts/main.js"></script>
 </body>
 </html>

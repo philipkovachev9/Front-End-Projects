@@ -32,7 +32,8 @@ a:hover {
     width: 200px;
 }
 
-h1 {
+h1,
+h2 {
     text-align: center;
 }
 
@@ -42,6 +43,16 @@ h1 {
     font-size: 15px;
     text-align: center;
     padding: 12px;
+}
+
+.green-iguana-range {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section {
+    padding: 15px;
 }
 
 .header {
@@ -63,19 +74,15 @@ li {
     padding: 15px;
 }
 
-p {
-    padding: 25px;
-}
-
 nav {
     border-top: solid 1px #DADADA;
     border-bottom: solid 1px #DADADA;
     margin-top: 60px;
-    text-align: center;  
+    text-align: center;
 }
 
 #dropdown {
-   display: none;
+    display: none;
 }
 
 #dropdown.active {
@@ -83,7 +90,11 @@ nav {
     display: flex;
     flex-direction: column;
     position: absolute;
-    line-height:25px; 
+    line-height: 25px;
     padding: 10px;
     margin-left: -40px;
+}
+
+.bold {
+    font-weight: bold;
 }

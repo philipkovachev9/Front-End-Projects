@@ -13,14 +13,6 @@ html {
     background-color: #FFFFFF;
 }
 
-#navigation {
-    border-top: solid 1px #DADADA;
-    border-bottom: solid 1px #DADADA;
-    margin-top: 60px;
-    padding: 15px;
-    text-align: center;
-}
-
 a {
     padding: 15px;
     margin: 10px;
@@ -37,7 +29,7 @@ a:hover {
 
 .logo {
     height: 150px;
-    width: 180px;
+    width: 200px;
 }
 
 h1,
@@ -80,4 +72,29 @@ li {
 #social {
     float: right;
     padding: 15px;
+}
+
+nav {
+    border-top: solid 1px #DADADA;
+    border-bottom: solid 1px #DADADA;
+    margin-top: 60px;
+    text-align: center;  
+}
+
+#dropdown {
+   display: none;
+}
+
+#dropdown.active {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    line-height:25px; 
+    padding: 10px;
+    margin-left: -40px;
+}
+
+img {
+height: 200px;
 }

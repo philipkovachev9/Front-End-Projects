@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Green Iguana Foundation</title>
     <link rel="stylesheet" href="../css/habitat.css">
+    <meta charset="UTF-8">
 </head>
+
 <body>
     <div id="page">
         <div class="header">
@@ -14,13 +16,30 @@
             </ul>
         </div>
         <img src="../images/logo.jpg" alt="logo picture" class="logo">
-        <div id="navigation">
-            <a href="../index.html">Home</a>
-            <a href="../pages/about.html">Who are we</a>
-            <a href="">Raising in captivity</a>
-            <a href="../pages/habitat.html">Habitat</a>
-        </div>
-
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="../pages/about.html">Who are we</a>
+                </li>
+                <li>
+                    <a href="../pages/habitat.html">Habitat</a>
+                </li>
+                <li id="menu">
+                    <a href="#">Raising in Captivity</a>
+                    <ul id="dropdown">
+                        <li>
+                            <a href="../pages/tempandhum.html">Temperature and Humidity</a>
+                        </li>
+                        <li>
+                            <a href="../pages/diet.html">Diet</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
         <h1>Where do Green Iguanas Live?</h1>
         <section>
             <p> Wild green iguanas can be found in southern Mexico, Central America and most parts of South America. Feral populations
@@ -39,13 +58,11 @@
                 off shelves and fall off of perches, they are quite good climbers. They spend the majority of the day high
                 in the forest canopy, and venture to the ground only to move from tree to tree, to mate, and to lay eggs.
                 They are also good swimmers and jumpers. </p>
-
         </section>
         <div id="footer">
-            <span>Copyright Green Iguana Foundation © 2018</span>
+            <span>Copyright Green Iguana Foundation &copy; 2018</span>
         </div>
     </div>
-
-    <script src="scripts/main.js"></script>
+    <script src="../scripts/main.js"></script>
 </body>
 </html>
