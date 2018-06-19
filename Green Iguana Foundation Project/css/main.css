@@ -91,17 +91,14 @@ li {
    display: none;
 }
 
-#dropdown.active{
+#dropdown.active {
     margin-top: 15px;
     display: flex;
     flex-direction: column;
     position: absolute;
-    line-height:40px; 
+    line-height: 40px;
     padding: 10px;
-     margin-left: 10px;
-    background-color:  #EFEFEF;
+    margin-left: 10px;
+    background-color: #EFEFEF;
 }
-
-
-
 
