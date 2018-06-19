@@ -1,35 +1,10 @@
 body,
 html {
-    background-color: #F5F2D3;
-    margin: 0;
     height: 100%;
-    font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #page {
-    margin: 0px auto;
-    width: 970px;
     height: 100%;
-    background-color: #FFFFFF;
-}
-
-a {
-    padding: 15px;
-    margin: 10px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: black;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-a:hover {
-    background-color: #E6E6E6;
-}
-
-.logo {
-    height: 150px;
-    width: 200px;
 }
 
 h1,
@@ -37,62 +12,8 @@ h2 {
     text-align: center;
 }
 
-#footer {
-    border-top: solid 1px #DADADA;
-    color: #707070;
-    font-size: 15px;
-    text-align: center;
-    padding: 12px;
-}
-
-.green-iguana-range {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-section {
+.content {
     padding: 15px;
-}
-
-.header {
-    float: right;
-    margin: 5px;
-}
-
-ul {
-    color: #9FBD38;
-}
-
-li {
-    display: inline-block;
-    padding: 15px;
-}
-
-#social {
-    float: right;
-    padding: 15px;
-}
-
-nav {
-    border-top: solid 1px #DADADA;
-    border-bottom: solid 1px #DADADA;
-    margin-top: 60px;
-    text-align: center;
-}
-
-#dropdown {
-    display: none;
-}
-
-#dropdown.active {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    line-height: 25px;
-    padding: 10px;
-    margin-left: -40px;
 }
 
 .bold {
