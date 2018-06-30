@@ -7,7 +7,7 @@ body {
 #page {
     margin: 0px auto;
     width: 970px;
-    height: 800px;
+    height: 850px;
     background-color: #FFFFFF;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -65,7 +65,7 @@ i:hover {
     border-top: solid 1px #DADADA;
     color: #707070;
     font-size: 15px;
-    margin-top: 100px;
+    margin-top: 140px;
     text-align: center;
     padding: 12px;
 }
@@ -74,7 +74,7 @@ i:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 #navigation {
