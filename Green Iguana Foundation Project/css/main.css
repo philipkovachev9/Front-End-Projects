@@ -89,7 +89,7 @@ li {
 }
 
 #dropdown {
-   display: none;
+    display: none;
 }
 
 #dropdown.active {
@@ -101,5 +101,5 @@ li {
     padding: 10px;
     margin-left: 10px;
     background-color: #EFEFEF;
+    width: 180px;
 }
-
