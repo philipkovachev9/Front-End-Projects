@@ -2,12 +2,11 @@ var closeDropdown = function(){
     $('#dropdown').hide();
 }
 
-$('#menu').on('mouseover', function(e){ 
+$('#menu').on('mouseover', function(){ 
     $('#dropdown').show().addClass('active');
     clearTimeout(timeout);
 });
 
-$('#menu').on('mouseout', function(e){ 
+$('#menu').on('mouseout', function(){ 
      timeout = setTimeout(closeDropdown, 500);
 });
-
