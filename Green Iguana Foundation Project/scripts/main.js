@@ -8,5 +8,6 @@ $('#menu').on('mouseover', function(e){
 });
 
 $('#menu').on('mouseout', function(e){ 
-     timeout = setTimeout(closeDropdown, 1000);
+     timeout = setTimeout(closeDropdown, 500);
 });
+
