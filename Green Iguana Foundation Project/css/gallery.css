@@ -1,0 +1,15 @@
+h1,p {
+    text-align: center;
+}
+
+.gallery > img {
+    height: 150px;
+    width: 150px;
+    margin-left: 50px;
+    padding: 10px;
+}
+
+#page {
+    height: 100%;
+}
+
