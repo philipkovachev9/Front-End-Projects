@@ -5,7 +5,7 @@ $(function () {
         $(".img-show img").attr("src", $src);
     });
 
-    $("span, .overlay").click(function () {
+    $("span").click(function () {
         $(".show").fadeOut();
     });
     
