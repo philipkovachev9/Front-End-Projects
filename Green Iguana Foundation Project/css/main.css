@@ -53,7 +53,7 @@ a {
     font-weight: bold;
 }
 
-a:hover {
+.hover:hover {
     background-color: #E6E6E6;
 }
 
@@ -102,4 +102,14 @@ li {
     margin-left: 10px;
     background-color: #EFEFEF;
     width: 175px;
+}
+
+.contribute-link {
+    background-color: #9fbd38;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.contribute-link > a {
+    color: white;
 }
