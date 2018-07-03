@@ -7,7 +7,7 @@ body {
 #page {
     margin: 0px auto;
     width: 970px;
-    height: 850px;
+    height: 100%;
     background-color: #FFFFFF;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -67,7 +67,7 @@ i:hover {
     font-size: 15px;
     margin-top: 140px;
     text-align: center;
-    padding: 12px;
+    padding: 16px;
 }
 
 .iguana {

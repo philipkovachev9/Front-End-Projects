@@ -1,15 +1,21 @@
 #page {
-    margin: 0px auto;
-    width: 970px;
     height: 100%;
-    background-color: #FFFFFF;
 }
 
 h1,
-h2 {
+h2,
+    {
     text-align: center;
 }
 
 p {
     padding: 20px;
+}
+
+.photos {
+    height: 170px;
+    width: 190px;
+    padding: 7px;
+    border: 2px solid #cfcfcf;
+    float: left;
 }
