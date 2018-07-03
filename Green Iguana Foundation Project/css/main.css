@@ -44,7 +44,7 @@ i {
 }
 
 a {
-    padding: 15px;
+    padding: 18px;
     margin: 10px;
     text-decoration: none;
     text-transform: uppercase;
@@ -107,7 +107,7 @@ li {
 .contribute-link {
     background-color: #9fbd38;
     border-radius: 5px;
-    padding: 5px;
+    padding: 3px;
 }
 
 .contribute-link > a {
