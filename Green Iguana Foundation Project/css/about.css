@@ -2,20 +2,10 @@
     height: 100%;
 }
 
-h1,
-h2,
-    {
+h1 {
     text-align: center;
 }
 
 p {
     padding: 20px;
-}
-
-.photos {
-    height: 170px;
-    width: 190px;
-    padding: 7px;
-    border: 2px solid #cfcfcf;
-    float: left;
 }

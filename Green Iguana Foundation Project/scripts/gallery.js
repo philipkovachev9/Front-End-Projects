@@ -4,9 +4,7 @@ $(function () {
         $(".show").fadeIn();
         $(".img-show img").attr("src", $src);
     });
-
     $("span").click(function () {
         $(".show").fadeOut();
     });
-    
 });

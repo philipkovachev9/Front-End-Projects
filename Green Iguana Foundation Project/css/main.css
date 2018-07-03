@@ -26,7 +26,7 @@ body {
     padding: 10px;
 }
 
-.slogans > li {
+.slogans>li {
     color: #9FBD38;
     display: inline-block;
     padding: 15px;
@@ -67,10 +67,10 @@ i:hover {
     font-size: 15px;
     margin-top: 140px;
     text-align: center;
-    padding: 16px;
+    padding: 12px;
 }
 
-.iguana {
+.image-slider {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -81,7 +81,7 @@ i:hover {
     border-top: solid 1px #DADADA;
     border-bottom: solid 1px #DADADA;
     margin-top: 60px;
-    text-align: center;  
+    text-align: center;
 }
 
 li {
