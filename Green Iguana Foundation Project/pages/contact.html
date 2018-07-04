@@ -49,12 +49,29 @@
                 </li>
             </ul>
         </div>
-        <h1>Contact Us</h1>
+        <form name="form" action="#" onsubmit="validate()">
+                <h1>Contact</h1>
+            <div>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="user_name">
+              <div id="name_error"></div>
+            </div>
+            <div>
+              <label for="mail">E-mail:</label>
+              <input type="email" id="mail" name="user_mail">
+            </div>
+            <div>
+              <label for="msg">Message:</label>
+              <textarea id="msg" name="user_message"></textarea>
+            </div>
+            <input type="submit" name="submit">
+          </form>
         <div id="footer">
             <span>Copyright Green Iguana Foundation &copy; 2018</span>
         </div>
     </div>
     <script src="../scripts/jquery.js"></script>
     <script src="../scripts/main.js"></script>
+    <script src="../scripts/form.js"></script>
 </body>
 </html>
