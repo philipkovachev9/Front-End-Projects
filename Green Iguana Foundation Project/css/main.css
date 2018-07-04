@@ -113,3 +113,16 @@ li {
 .contribute-link > a {
     color: white;
 }
+
+.contact-us {
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+.contact-link {
+    margin:0px;
+    padding: 0px;
+    text-transform: none;
+    color: #9AB441;
+    cursor: pointer;
+}

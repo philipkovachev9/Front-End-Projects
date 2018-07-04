@@ -11,10 +11,6 @@ p {
     border: 2px solid #cfcfcf;
 }
 
-#page {
-    height: 100%;
-}
-
 img:hover {
     cursor: pointer;
 }

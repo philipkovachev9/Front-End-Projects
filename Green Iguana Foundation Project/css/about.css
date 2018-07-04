@@ -5,3 +5,9 @@ h1 {
 p {
     padding: 20px;
 }
+
+.images {
+   width: 200px;
+   display: flex;
+   margin: auto;
+}
