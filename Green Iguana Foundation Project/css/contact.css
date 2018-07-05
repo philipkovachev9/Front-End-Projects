@@ -24,3 +24,9 @@ textarea {
     height: 150px;
     width: 500px;
 }
+
+#error_name,
+#error_email,
+#error_msg {
+    color: red;
+}
