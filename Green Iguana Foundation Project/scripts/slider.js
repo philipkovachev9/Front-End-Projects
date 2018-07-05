@@ -10,10 +10,10 @@ imageDuration = 6000;
 function slideShow() {
     document.getElementById('image').src = imageArray[index];
     index++;
-    if(index == imageArray.length) {
-     index = 0;
+    if (index == imageArray.length) {
+        index = 0;
     }
-setTimeout('slideShow()', imageDuration);
+    setTimeout('slideShow()', imageDuration);
 }
 
 slideShow();

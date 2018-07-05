@@ -6,4 +6,3 @@ function validate() {
         alert("All fields are required");
     }
 }
-    

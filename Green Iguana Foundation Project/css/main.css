@@ -126,3 +126,12 @@ li {
     color: #9AB441;
     cursor: pointer;
 }
+
+.footer-link {
+    padding: 0px;
+    margin: 15px;
+    text-decoration: underline;
+    text-transform: none;
+    font-size: 15px;
+    color: #707070;
+}
