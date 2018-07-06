@@ -1,3 +1,6 @@
+document.getElementById('form').addEventListener('submit', validate);
+
+
 function validate() {
     var name = document.getElementById('name').value;
     var email = document.getElementById('mail').value;
