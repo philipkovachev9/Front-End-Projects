@@ -15,5 +15,4 @@ function slideShow() {
     }
     setTimeout('slideShow()', imageDuration);
 }
-
 slideShow();
