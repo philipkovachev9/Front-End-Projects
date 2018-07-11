@@ -4,7 +4,6 @@ var closeDropdown = function () {
 
 $('#menu').on('mouseover', function () {
     $('#dropdown').show().addClass('active');
-    clearTimeout(this.timeout);
 });
 
 $('#menu').on('mouseout', function () {
