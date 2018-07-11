@@ -5,7 +5,7 @@ var imageArray = [
 ];
 
 var index = 0;
-imageDuration = 6000;
+imageDuration = 5000;
 
 function slideShow() {
     document.getElementById('image').src = imageArray[index];
