@@ -48,3 +48,13 @@ const cardsArray = [
         'img' : '/images/12.jpg',
     },
 ]
+
+// Grabbing the div with id of root
+const game = document.getElementById('game');
+
+// Creating a grid and setting a class of grid
+const grid = document.createElement('section');
+grid.setAttribute('class', 'grid');
+
+//Appending the grid section to the game div
+game.appendChild(grid);
