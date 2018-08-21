@@ -25,7 +25,7 @@ const cardsArray = [
     },
     {
         'name': 'card7',
-        'img' : './images/7.jpg',
+        'img' : './images/7.jpeg',
     },
     {
         'name': 'card8',
