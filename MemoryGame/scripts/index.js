@@ -48,8 +48,12 @@ const cardsArray = [
         'img' : './images/12.jpg',
     },
 ]
-
+// Copying each card
 let gameGrid = cardsArray.concat(cardsArray);
+
+// Randomizing the array
+gameGrid.sort(() => 0.5 - Math.random());
+
 // Grabbing the div with id of root
 const game = document.getElementById('game');
 
