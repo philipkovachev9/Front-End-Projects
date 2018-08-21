@@ -53,6 +53,8 @@ let gameGrid = cardsArray.concat(cardsArray);
 gameGrid.sort(() => 0.5 - Math.random());
 
 let count = 0;
+let firstGuess = '';
+let secondGuess = '';
 
 // Grab the root element, create a grid, set the class grid and append it
 const game = document.getElementById('game');
@@ -75,9 +77,27 @@ grid.addEventListener('click', function (event) {
   if (clicked.nodeName === 'SECTION') { return; }
   if (count < 2) {
     count++;
-    clicked.classList.add('selected');
+    if(count === 1) {
+        firstGuess = clicked.dataset.name;
+        clicked.classList.add('selected');
+    } else {
+        secondGuess = clicked.dataset.name;
+        clicked.classList.add('selected');
+    }
+    if (firstGuess !== '' && secondGuess !== '') {
+        if(firstGuess === secondGuess) {
+            match();
+        }
+    }
   }
 });
+
+const match = () => {
+    var selected = document.querySelectorAll('.selected');
+    selected.forEach(card => {
+        card.classList.add('match');
+    });
+}
 
 
   
