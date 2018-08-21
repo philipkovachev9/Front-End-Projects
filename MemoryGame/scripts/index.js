@@ -87,6 +87,9 @@ grid.addEventListener('click', function (event) {
     if (firstGuess !== '' && secondGuess !== '') {
         if(firstGuess === secondGuess) {
             match();
+            resetGuesses();
+        } else {
+            resetGuesses();
         }
     }
   }
@@ -98,6 +101,17 @@ const match = () => {
         card.classList.add('match');
     });
 }
+
+const resetGuesses = () => {
+firstGuess = '';
+secondGuess = '';
+count = 0;
+
+var selected = document.querySelectorAll('.selected');
+selected.forEach(card => {
+    card.classList.remove('selected');
+});
+};
 
 
   
