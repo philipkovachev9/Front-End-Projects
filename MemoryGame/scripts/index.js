@@ -55,6 +55,7 @@ gameGrid.sort(() => 0.5 - Math.random());
 let count = 0;
 let firstGuess = '';
 let secondGuess = '';
+let delay = 1200;
 
 // Grab the root element, create a grid, set the class grid and append it
 const game = document.getElementById('game');
@@ -64,35 +65,35 @@ game.appendChild(grid);
 
 //For each items in the array, create a card, change the class and dataset, then append it
 gameGrid.forEach(item => {
-  const card = document.createElement('div');
-  card.classList.add('card');
-  card.dataset.name = item.name;
-  card.style.backgroundImage = `url(${item.img})`;
-  grid.appendChild(card);
+    const card = document.createElement('div');
+    card.classList.add('card');
+    card.dataset.name = item.name;
+    card.style.backgroundImage = `url(${item.img})`;
+    grid.appendChild(card);
 });
 
 //Create an onclick event, match only two cards
 grid.addEventListener('click', function (event) {
-  let clicked = event.target;
-  if (clicked.nodeName === 'SECTION') { return; }
-  if (count < 2) {
-    count++;
-    if(count === 1) {
-        firstGuess = clicked.dataset.name;
-        clicked.classList.add('selected');
-    } else {
-        secondGuess = clicked.dataset.name;
-        clicked.classList.add('selected');
-    }
-    if (firstGuess !== '' && secondGuess !== '') {
-        if(firstGuess === secondGuess) {
-            match();
-            resetGuesses();
+    let clicked = event.target;
+    if (clicked.nodeName === 'SECTION') { return; }
+    if (count < 2) {
+        count++;
+        if (count === 1) {
+            firstGuess = clicked.dataset.name;
+            clicked.classList.add('selected');
         } else {
-            resetGuesses();
+            secondGuess = clicked.dataset.name;
+            clicked.classList.add('selected');
+        }
+        if (firstGuess !== '' && secondGuess !== '') {
+            if (firstGuess === secondGuess) {
+                setTimeout(match, delay);
+                setTimeout(resetGuesses, delay);
+            } else {
+                setTimeout(resetGuesses, delay);
+            }
         }
     }
-  }
 });
 
 const match = () => {
@@ -103,14 +104,14 @@ const match = () => {
 }
 
 const resetGuesses = () => {
-firstGuess = '';
-secondGuess = '';
-count = 0;
+    firstGuess = '';
+    secondGuess = '';
+    count = 0;
 
-var selected = document.querySelectorAll('.selected');
-selected.forEach(card => {
-    card.classList.remove('selected');
-});
+    var selected = document.querySelectorAll('.selected');
+    selected.forEach(card => {
+        card.classList.remove('selected');
+    });
 };
 
 
