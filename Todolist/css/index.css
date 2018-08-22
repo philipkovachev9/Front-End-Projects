@@ -1,5 +1,50 @@
+* {
+    margin:0;
+    padding:0;
+}
+
 #trash {
     height: 40x;
     width: 40px;
     vertical-align: middle;
+}
+
+.header {
+    background-color: #4696E5;
+    height: 300px;
+}
+
+form {
+    margin: 0 auto;
+    width: 350px;
+}
+
+h2, p {
+    color: white;
+    text-align: center;
+}
+
+#input {
+    width:500px;
+    height: 25px;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+button {
+    color: white;
+    height: 50px;
+    width: 80px;
+    background-color: #4696E5;
+    border: solid;
+    margin-left: 430px;
+    border-radius: 5px;
+}
+
+h1 {
+    padding: 15px;
+}
+
+ol {
+    margin-left: 50px;
 }
