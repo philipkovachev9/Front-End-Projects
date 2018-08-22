@@ -12,7 +12,7 @@
     
     
     var removeTask = document.createElement('img');
-    removeTask.setAttribute('src', '/images/trash.jpg');
+    removeTask.setAttribute('src', './images/trash.jpg');
     removeTask.setAttribute('id', 'trash');
     removeTask.addEventListener('click', function() {
         newItem.parentNode.removeChild(newItem);
