@@ -3,6 +3,10 @@
     padding:0;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 #trash {
     height: 40x;
     width: 40px;
@@ -30,6 +34,7 @@ h2, p {
     height: 25px;
     border-radius: 5px;
     margin: 15px;
+    font-size: 20px
 }
 
 button {
@@ -48,6 +53,7 @@ h1 {
 
 ol {
     margin-left: 50px;
+    font-size: 20px;
 }
 
 li {
