@@ -7,6 +7,7 @@
     height: 40x;
     width: 40px;
     vertical-align: middle;
+    float: right;
 }
 
 .header {
@@ -47,4 +48,12 @@ h1 {
 
 ol {
     margin-left: 50px;
+}
+
+li {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    height:50px;
+    width: 600px;
+    padding: 10px;
+    text-align: center;
 }
