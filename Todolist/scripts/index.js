@@ -16,6 +16,8 @@
     removeTask.setAttribute('id', 'trash');
     removeTask.addEventListener('click', function() {
         newItem.parentNode.removeChild(newItem);
+        count--;
+        document.getElementById('counter').innerHTML = count;
     });
     newItem.appendChild(removeTask);
     
