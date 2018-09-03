@@ -10,7 +10,6 @@
     count++;
     document.getElementById('counter').innerHTML = count;
     
-    
     var removeTask = document.createElement('img');
     removeTask.setAttribute('src', './images/trash.jpg');
     removeTask.setAttribute('id', 'trash');
@@ -20,7 +19,6 @@
         document.getElementById('counter').innerHTML = count;
     });
     newItem.appendChild(removeTask);
-    
 });
 
     
