@@ -1,5 +1,5 @@
 // Constants, baseURL and needed input elements
-const baseURL = 'https://repti-care-1b396.firebaseio.com/';
+const baseURL = 'https://repti-care-1b396.firebaseio.com/animals';
 const SPECIES = $('#species');
 const NAME = $('#name');
 const AGE = $('#age');
@@ -38,6 +38,25 @@ function createAnimal() {
     }
 
 }
+
+function loadAnimals() {
+    $.ajax({
+        method: 'GET',
+        url: baseURL + '.json'
+    }).then(appendAnimals).catch(handleError)
+}
+
+function appendAnimals(animals) {
+    TABLE.empty();
+    for (const key in animals) {
+        const li = $('<li></li>');
+        const button = $('<button>Delete</button>');
+        li.text(`Name:${animals[key].name} Species: ${animals[key].species} Age: ${animals[key].age} Last Fed: ${animals[key].last_fed} Last Shed: ${animals[key].last_shed} Diet: ${animals[key].diet} Basking Area Temperature: ${animals[key].basking_area_temperature} Cold Side Temperature: ${animals[key].cold_part_temperature} Humidity: ${animals[key].humidity} Additional Info: ${animals[key].additional_info} `)
+        li.append(button);
+        TABLE.append(li)
+    }
+}
+
 
 function handleError(error) {
     console.log(error)
