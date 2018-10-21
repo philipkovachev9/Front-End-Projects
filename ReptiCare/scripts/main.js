@@ -51,6 +51,14 @@ function appendAnimals(animals) {
     for (const key in animals) {
         const li = $('<li></li>');
         const button = $('<button>Delete</button>');
+        button.on('click', function() {
+            $.ajax({
+                method: 'DELETE',
+                url: baseURL + '/' + this.id + '.json'
+            }).then(function() {
+                li.remove();
+            })
+        })
         $(button).addClass('btn btn-danger');
         li.text(`Name:${animals[key].name} Species: ${animals[key].species} Age: ${animals[key].age} Last Fed: ${animals[key].last_fed} Last Shed: ${animals[key].last_shed} Diet: ${animals[key].diet} Basking Area Temperature: ${animals[key].basking_area_temperature} Cold Side Temperature: ${animals[key].cold_part_temperature} Humidity: ${animals[key].humidity} Additional Info: ${animals[key].additional_info} `)
         li.append(button);
