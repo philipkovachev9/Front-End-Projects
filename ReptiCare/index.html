@@ -12,25 +12,32 @@
 </head>
 <body>
     <div class="jumbotron">
-    <h1>Keep track of everything you need to know about your reptile</h1>
+    <div class="placeholder"></div>
     </div>
     <div class="container">
             <h2>Add a new Animal</h2>
-   <form>
     <div class="form-group">
     Species: <input type="text" id="species" class="form-control">
     Name: <input type="text" id="name" class="form-control" >
     Age: <input type="text" id="age" class="form-control">
     Last Fed: <input type="date" id="last-fed" class="form-control">
     Last Shed: <input type="date" id="last-shed" class="form-control">
+    Diet: <input type="text" id="diet" class="form-control">
+    Basking area temperature: <input type="text" id="basking-area-temperature" class="form-control">
+    Cold part temperature: <input type="text" id="other-temperature" class="form-control">
+    Humidity: <input type="text" id="humidity" class="form-control">
     Addition Info: <textarea class="form-control"></textarea>
     <button id="btnCreate" class="btn btn-primary">Create</button>
     </div>
-   </form>
     <ul id="animals"></ul>
     <h3>View Current Animals</h3>
     <button id="btnLoad" class="btn btn-info">Load Animals</button>
+    <ul id="animal-list">
+
+    </ul>
+    </div>
     </div>
     <script src="./scripts/jquery.js"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>

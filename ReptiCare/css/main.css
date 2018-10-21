@@ -2,6 +2,10 @@ button:hover {
     cursor: pointer;
 }
 
-h1 {
-    text-align: center;
+.jumbotron {
+    background: url('./../images/Header.jpg') no-repeat;
+    background-size: cover; 
+    background-position: center;
+    height: 350px;
+    
 }
