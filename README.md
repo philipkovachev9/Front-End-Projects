@@ -2,7 +2,7 @@
 Here I store my Front-End development projects.
 
 ## Green Iguana Project
-A simple website built by best practices using HTML, CSS, JavaScript and a little Jquery.
+A website built for a fictional non-profit organization that aims to save the green iguana lizards by providing educational information and raising funds. 
 
 ## Memory Game
 A quick memory game.
