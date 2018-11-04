@@ -19,7 +19,7 @@
     </div>
     <div class="container">
             <h2>Add a new Animal</h2>
-    <div class="form-group">
+    <form class="form-group" id="add-animals">
     Species: <input type="text" id="species" class="form-control">
     Name: <input type="text" id="name" class="form-control" >
     Age: <input type="text" id="age" class="form-control">
@@ -31,8 +31,7 @@
     Humidity: <input type="text" id="humidity" class="form-control">
     Addition Info: <textarea class="form-control" id="additional-info"></textarea>
     <button id="btnCreate" class="btn btn-primary">Create</button>
-    </div>
-    <ul id="animals"></ul>
+    </form>
     <h3>View Current Animals</h3>
     <ol id="animal-list">
 
@@ -53,6 +52,11 @@
   const db = firebase.firestore();
   db.settings({ timestampsInSnapshots: true }); 
 </script>
+<script
+src="https://code.jquery.com/jquery-3.3.1.js"
+integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+crossorigin="anonymous"></script>
+
     <script src="./scripts/main.js"></script>
 </body>
 </html>

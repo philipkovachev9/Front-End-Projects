@@ -1,4 +1,6 @@
 const animalList = document.querySelector('#animal-list');
+const form = document.querySelector('#add-animals');
+
 
 function renderAnimals(doc) {
 let li = document.createElement('li');
@@ -39,8 +41,26 @@ li.append(additional_info);
 animalList.appendChild(li);
 }
 
+// getting data from the back end
 db.collection('animals').get().then((snapshot) => {
 snapshot.docs.forEach(doc => {
     renderAnimals(doc);
   })
+})
+// adding data
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    db.collection('animals').add({
+        species: form.species.value,
+        name: form.name.value,
+        age: form.age.value,
+        last_fed: document.querySelector("#last-fed").value,
+        last_shed: document.querySelector("#last-shed").value,
+        diet: form.diet.value,
+        basking_area_temp: document.querySelector("#basking-area-temperature").value,
+        cold_part_temp: document.querySelector("#cold-temperature").value,
+        humidity: form.humidity.value,
+        additional_info: document.querySelector("#additional-info").value
+
+    })
 })
