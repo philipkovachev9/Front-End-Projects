@@ -1,72 +1,46 @@
-// Constants, baseURL and needed input elements
-const baseURL = 'https://repti-care-1b396.firebaseio.com/animals';
-const SPECIES = $('#species');
-const NAME = $('#name');
-const AGE = $('#age');
-const LAST_FED = $('#last-fed');
-const LAST_SHED = $('#last-shed');
-const DIET = $('#diet');
-const BASKING_AREA_TEMPERATURE = $('#basking-area-temperature');
-const COLD_PART_TEMPERATURE = $('#cold-temperature');
-const HUMIDITY = $('#humidity');
-const ADDITIONAL_INFO = $('#additional-info');
-const TABLE = $('#animal-list');
+const animalList = document.querySelector('#animal-list');
 
-$('#btnCreate').on('click', createAnimal);
-$('#btnLoad').on('click', loadAnimals)
+function renderAnimals(doc) {
+let li = document.createElement('li');
+let name = document.createElement('div');
+let species = document.createElement('div');
+let age = document.createElement('div');
+let last_fed = document.createElement('div');
+let last_shed = document.createElement('div');
+let diet = document.createElement('div');
+let basking_area_temp = document.createElement('div');
+let cold_part_temp = document.createElement('div');
+let humidity = document.createElement('div');
+let additional_info = document.createElement('div');
 
-function createAnimal() {
-    let species = SPECIES.val();
-    let name = NAME.val();
-    let age = AGE.val();
-    let last_fed = LAST_FED.val();
-    let last_shed = LAST_SHED.val();
-    let diet = DIET.val();
-    let basking_area_temperature = BASKING_AREA_TEMPERATURE.val();
-    let cold_part_temperature = COLD_PART_TEMPERATURE.val();
-    let humidity = HUMIDITY.val();
-    let additional_info = ADDITIONAL_INFO.val();
+li.setAttribute('data-id', doc.id);
+name.textContent = `name: ${doc.data().name}`
+species.textContent = `species: ${doc.data().species}`
+age.textContent = `age: ${doc.data().age}`
+last_fed.textContent = `last fed: ${doc.data().last_fed}`;
+last_shed.textContent = `last shed: ${doc.data().last_shed}`;
+diet.textContent = `diet: ${doc.data().diet}`;
+basking_area_temp.textContent =`basking area temp: ${ doc.data().basking_area_temp}`;
+cold_part_temp.textContent =  `cold part temp: ${doc.data().cold_part_temp}`;
+humidity.textContent = `humidity: ${doc.data().humidity}`;
+additional_info.textContent = `additional info: ${doc.data().additional_info}`;
 
-    if (species.trim() !== '' && name.trim() !== '' && age.trim() !== '' && last_fed !== '' && last_shed !== '' && diet !== '' && basking_area_temperature !== '' && cold_part_temperature !== '' && humidity !== '' && additional_info !== '') {
-        $.ajax({
-            method: 'POST',
-            url: baseURL + '.json',
-            data: JSON.stringify({ species, name, age, last_fed, last_shed, diet, basking_area_temperature, cold_part_temperature, humidity, additional_info })
-        }).then(function (res) {
-            console.log(res);
-        }).catch(handleError);
-    }
+li.appendChild(species);
+li.append(name);
+li.append(age);
+li.append(last_fed);
+li.append(last_shed);
+li.append(diet);
+li.append(basking_area_temp);
+li.append(cold_part_temp);
+li.append(humidity);
+li.append(additional_info);
 
+animalList.appendChild(li);
 }
 
-function loadAnimals() {
-    $.ajax({
-        method: 'GET',
-        url: baseURL + '.json'
-    }).then(appendAnimals).catch(handleError)
-}
-
-function appendAnimals(animals) {
-    TABLE.empty();
-    for (const key in animals) {
-        const li = $('<li></li>');
-        const button = $('<button>Delete</button>');
-        button.on('click', function() {
-            $.ajax({
-                method: 'DELETE',
-                url: baseURL + '/' + this.id + '.json'
-            }).then(function() {
-                li.remove();
-            })
-        })
-        $(button).addClass('btn btn-danger');
-        li.text(`Name:${animals[key].name} Species: ${animals[key].species} Age: ${animals[key].age} Last Fed: ${animals[key].last_fed} Last Shed: ${animals[key].last_shed} Diet: ${animals[key].diet} Basking Area Temperature: ${animals[key].basking_area_temperature} Cold Side Temperature: ${animals[key].cold_part_temperature} Humidity: ${animals[key].humidity} Additional Info: ${animals[key].additional_info} `)
-        li.append(button);
-        TABLE.append(li)
-    }
-}
-
-
-function handleError(error) {
-    console.log(error)
-}
+db.collection('animals').get().then((snapshot) => {
+snapshot.docs.forEach(doc => {
+    renderAnimals(doc);
+  })
+})

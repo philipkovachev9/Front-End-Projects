@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Repti Care</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
         integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/main.css">
@@ -31,13 +34,25 @@
     </div>
     <ul id="animals"></ul>
     <h3>View Current Animals</h3>
-    <button id="btnLoad" class="btn btn-info">View My Animals</button>
     <ol id="animal-list">
 
     </ol>
     </div>
     </div>
-    <script src="./scripts/jquery.js"></script>
+    <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBSuC8nqJzLe7d5jKS-_nE15kaI9Y6NIfI",
+    authDomain: "repti-care-32176.firebaseapp.com",
+    databaseURL: "https://repti-care-32176.firebaseio.com",
+    projectId: "repti-care-32176",
+    storageBucket: "repti-care-32176.appspot.com",
+    messagingSenderId: "632910932105"
+  };
+  firebase.initializeApp(config);
+  const db = firebase.firestore();
+  db.settings({ timestampsInSnapshots: true }); 
+</script>
     <script src="./scripts/main.js"></script>
 </body>
 </html>
