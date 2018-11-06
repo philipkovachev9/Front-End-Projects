@@ -19,3 +19,7 @@ th, h3{
     text-align: center;
     padding: 25px;
 }
+
+table {
+    margin-bottom: 50px;
+}
