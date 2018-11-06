@@ -54,11 +54,16 @@ deleteButton.addEventListener('click', (event) => {
 }
 
 // getting data from the back end
-debugger;
-db.collection('animals').orderBy('name').get().then((snapshot) => {
-snapshot.docs.forEach(doc => {
-    renderAnimals(doc);
-  })
+db.collection('animals').onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    changes.forEach(change => {
+        if(change.type == 'added') {
+            renderAnimals(change.doc);
+        } else if (change.type == 'removed') {
+            let li = animalList.querySelector('[data-id=' + change.doc.id + ']');
+            animalList.removeChild(li);
+        }
+    })
 })
 
 // adding data
