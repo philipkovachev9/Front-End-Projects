@@ -4,6 +4,7 @@ const form = document.querySelector('#add-animals');
 
 function renderAnimals(doc) {
 let li = document.createElement('li');
+let cross = document.createElement('div');
 let name = document.createElement('div');
 let species = document.createElement('div');
 let age = document.createElement('div');
@@ -17,6 +18,7 @@ let additional_info = document.createElement('div');
 
 li.setAttribute('data-id', doc.id);
 name.textContent = `name: ${doc.data().name}`
+cross.textContent = 'X';
 species.textContent = `species: ${doc.data().species}`
 age.textContent = `age: ${doc.data().age}`
 last_fed.textContent = `last fed: ${doc.data().last_fed}`;
@@ -37,16 +39,27 @@ li.append(basking_area_temp);
 li.append(cold_part_temp);
 li.append(humidity);
 li.append(additional_info);
+li.append(cross);
 
 animalList.appendChild(li);
+
+//deleting data
+cross.addEventListener('click', (event) => {
+    event.stopPropagation();
+    let id = event.target.parentElement.getAttribute('data-id');
+    db.collection('animals').doc(id).delete();
+})
+
 }
 
 // getting data from the back end
+debugger;
 db.collection('animals').get().then((snapshot) => {
 snapshot.docs.forEach(doc => {
     renderAnimals(doc);
   })
 })
+
 // adding data
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -54,13 +67,15 @@ form.addEventListener('submit', (event) => {
         species: form.species.value,
         name: form.name.value,
         age: form.age.value,
-        last_fed: document.querySelector("#last-fed").value,
-        last_shed: document.querySelector("#last-shed").value,
+        last_fed: document.querySelector('#last-fed').value,
+        last_shed: document.querySelector('#last-shed').value,
         diet: form.diet.value,
-        basking_area_temp: document.querySelector("#basking-area-temperature").value,
-        cold_part_temp: document.querySelector("#cold-temperature").value,
+        basking_area_temp: document.querySelector('#basking-area-temperature').value,
+        cold_part_temp: document.querySelector('#cold-temperature').value,
         humidity: form.humidity.value,
-        additional_info: document.querySelector("#additional-info").value
+        additional_info: document.querySelector('#additional-info').value
 
     })
 })
+
+
