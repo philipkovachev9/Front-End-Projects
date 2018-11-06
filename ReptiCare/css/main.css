@@ -11,4 +11,11 @@ button:hover {
 
 table, tr, td {
     border:  solid 1px;
+    width: 100%;
+    font-size: 20px;
+}
+
+th, h3{
+    text-align: center;
+    padding: 25px;
 }

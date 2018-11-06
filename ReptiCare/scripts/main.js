@@ -3,7 +3,7 @@ const form = document.querySelector('#add-animals');
 
 
 function renderAnimals(doc) {
-let li = document.createElement('li');
+let tr = document.createElement('tr');
 let deleteButton = document.createElement('button');
 let name = document.createElement('div');
 let species = document.createElement('div');
@@ -16,7 +16,7 @@ let cold_part_temp = document.createElement('div');
 let humidity = document.createElement('div');
 let additional_info = document.createElement('div');
 
-li.setAttribute('data-id', doc.id);
+tr.setAttribute('data-id', doc.id);
 name.textContent = `name: ${doc.data().name}`
 deleteButton.textContent = 'Delete';
 deleteButton.setAttribute('class','btn btn-danger');
@@ -30,19 +30,19 @@ cold_part_temp.textContent =  `cold part temp: ${doc.data().cold_part_temp}`;
 humidity.textContent = `humidity: ${doc.data().humidity}`;
 additional_info.textContent = `additional info: ${doc.data().additional_info}`;
 
-li.appendChild(species);
-li.append(name);
-li.append(age);
-li.append(last_fed);
-li.append(last_shed);
-li.append(diet);
-li.append(basking_area_temp);
-li.append(cold_part_temp);
-li.append(humidity);
-li.append(additional_info);
-li.append(deleteButton);
+tr.appendChild(species);
+tr.append(name);
+tr.append(age);
+tr.append(last_fed);
+tr.append(last_shed);
+tr.append(diet);
+tr.append(basking_area_temp);
+tr.append(cold_part_temp);
+tr.append(humidity);
+tr.append(additional_info);
+tr.append(deleteButton);
 
-animalList.appendChild(li);
+animalList.appendChild(tr);
 
 //deleting data
 deleteButton.addEventListener('click', (event) => {
