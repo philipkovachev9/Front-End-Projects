@@ -4,7 +4,7 @@ const form = document.querySelector('#add-animals');
 
 function renderAnimals(doc) {
 let li = document.createElement('li');
-let cross = document.createElement('button');
+let deleteButton = document.createElement('button');
 let name = document.createElement('div');
 let species = document.createElement('div');
 let age = document.createElement('div');
@@ -18,8 +18,8 @@ let additional_info = document.createElement('div');
 
 li.setAttribute('data-id', doc.id);
 name.textContent = `name: ${doc.data().name}`
-cross.textContent = 'Delete';
-cross.setAttribute('class','btn btn-danger');
+deleteButton.textContent = 'Delete';
+deleteButton.setAttribute('class','btn btn-danger');
 species.textContent = `species: ${doc.data().species}`
 age.textContent = `age: ${doc.data().age}`
 last_fed.textContent = `last fed: ${doc.data().last_fed}`;
@@ -40,12 +40,12 @@ li.append(basking_area_temp);
 li.append(cold_part_temp);
 li.append(humidity);
 li.append(additional_info);
-li.append(cross);
+li.append(deleteButton);
 
 animalList.appendChild(li);
 
 //deleting data
-cross.addEventListener('click', (event) => {
+deleteButton.addEventListener('click', (event) => {
     event.stopPropagation();
     let id = event.target.parentElement.getAttribute('data-id');
     db.collection('animals').doc(id).delete();
