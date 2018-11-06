@@ -4,7 +4,7 @@ const form = document.querySelector('#add-animals');
 
 function renderAnimals(doc) {
 let li = document.createElement('li');
-let cross = document.createElement('div');
+let cross = document.createElement('button');
 let name = document.createElement('div');
 let species = document.createElement('div');
 let age = document.createElement('div');
@@ -18,7 +18,8 @@ let additional_info = document.createElement('div');
 
 li.setAttribute('data-id', doc.id);
 name.textContent = `name: ${doc.data().name}`
-cross.textContent = 'X';
+cross.textContent = 'Delete';
+cross.setAttribute('class','btn btn-danger');
 species.textContent = `species: ${doc.data().species}`
 age.textContent = `age: ${doc.data().age}`
 last_fed.textContent = `last fed: ${doc.data().last_fed}`;
