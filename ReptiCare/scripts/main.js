@@ -54,7 +54,7 @@ cross.addEventListener('click', (event) => {
 
 // getting data from the back end
 debugger;
-db.collection('animals').get().then((snapshot) => {
+db.collection('animals').orderBy('name').get().then((snapshot) => {
 snapshot.docs.forEach(doc => {
     renderAnimals(doc);
   })
