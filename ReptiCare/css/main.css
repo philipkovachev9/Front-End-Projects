@@ -23,3 +23,24 @@ th, h3{
 table {
     margin-bottom: 50px;
 }
+
+.edit-form {
+   display: flex;
+   flex-direction: column;
+   width: 250px;
+   margin-left: 450px;
+   margin-bottom: 200px;
+   display: none;
+}
+
+.btn-info {
+    margin-left: 5px;
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin-left: 450px;
+    margin-bottom: 200px;
+}
