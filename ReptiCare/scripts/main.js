@@ -28,16 +28,40 @@ let baskingAreaTempInput = document.createElement("input");
 let coldPartTempInput = document.createElement("input");
 let humidityInput = document.createElement("input");
 let additionalInfoInput = document.createElement("input");
+let modal = document.createElement('div');
+let modalContent = document.createElement('div');
+let span = document.createElement('span');
+let h2 = document.createElement('h2');
+let nameLabel = document.createElement('label')
+let speciesLabel = document.createElement("label");
+let ageLabel = document.createElement("label");
+let lastLabel = document.createElement("label");
+let lastShedLabe = document.createElement("label");
+let dietLabel = document.createElement("label");
+let baskingAreaTempLabel = document.createElement("label");
+let coldPartTempLabel = document.createElement("label");
+let humidityLabel = document.createElement("label");
+let additionalInfoLabel = document.createElement("label");
 
 
 tr.setAttribute('data-id', doc.id);
 name.textContent = `name: ${doc.data().name}`
 deleteButton.textContent = 'Delete';
 deleteButton.setAttribute('class','btn btn-danger');
-editButton.textContent = 'Edit'
-editButton.setAttribute('class', 'btn btn-info')
-species.textContent = `species: ${doc.data().species}`
-age.textContent = `age: ${doc.data().age}`
+editButton.textContent = 'Edit';
+editButton.setAttribute('class', 'btn btn-info');
+editForm.setAttribute('class', 'form-group')
+modal.setAttribute('id','editModal');
+modal.setAttribute('class','modal');
+modalContent.setAttribute('class','modal-content');
+span.textContent = 'X';
+span.setAttribute('class','close');
+h2.textContent = 'Edit Animal';
+speciesLabel.innerHTML = 'Species:'
+nameLabel.innerHTML = 'Name:'
+
+species.textContent = `species: ${doc.data().species}`;
+age.textContent = `age: ${doc.data().age}`;
 last_fed.textContent = `last fed: ${doc.data().last_fed}`;
 last_shed.textContent = `last shed: ${doc.data().last_shed}`;
 diet.textContent = `diet: ${doc.data().diet}`;
@@ -51,6 +75,15 @@ editForm.setAttribute('class','edit-form')
 submit.setAttribute('type',"submit");
 submit.setAttribute('value',"Submit");
 submit.setAttribute('class',"btn btn-success");
+nameLabel.setAttribute('for','name')
+speciesLabel.setAttribute('for','name')
+ageLabel.setAttribute('for','name')
+lastLabel.setAttribute('for','')
+lastShedLabe.setAttribute('for','last shed')
+dietLabel.setAttribute('for','diet')
+nameInput.setAttribute('class','form-control')
+speciesInput.s
+
 
 td.appendChild(species);
 td.append(age);
@@ -72,7 +105,9 @@ td.append(baskingAreaTempInput);
 td.append(coldPartTempInput);
 td.append(humidityInput);
 td.append(additionalInfoInput);
+td.append(speciesInput)
 tr.appendChild(td);
+editForm.append(speciesLabel)
 editForm.appendChild(nameInput);
 editForm.append(ageSpecies);
 editForm.append(lastFedInput);
@@ -82,9 +117,16 @@ editForm.append(baskingAreaTempInput);
 editForm.append(coldPartTempInput);
 editForm.append(humidityInput);
 editForm.append(additionalInfoInput);
+editForm.append(speciesInput)
 editForm.append(submit)
 td.append(editForm);
 tr.appendChild(td);
+modal.append(modalContent);
+modalContent.append(span)
+modalContent.append(h2)
+td.append(modal)
+modalContent.append(editForm)
+
 
 animalList.appendChild(tr);
 
@@ -96,10 +138,12 @@ deleteButton.addEventListener('click', (event) => {
 })
 
 editButton.addEventListener('click', () => {
-    editForm.setAttribute('class','show')
+    modal.style.display = 'flex';
 })
 
-
+span.addEventListener('click', () => {
+    modal.style.display = "none";
+})
 }
 
 // getting data from the back end
