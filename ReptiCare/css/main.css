@@ -52,8 +52,8 @@ table {
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    height: 60%;
+    width: 50%; /* Could be more or less, depending on screen size */
+    height: 100%;
 }
 
 /* The Close Button */
@@ -77,9 +77,11 @@ table {
      flex-direction: column; 
      align-items: center;
      margin-top: 15px;
+     width: 50%;
+     height: 100%;
+     margin-left: 220px;
 }
 
 h2 {
     text-align: center;
 }
-
