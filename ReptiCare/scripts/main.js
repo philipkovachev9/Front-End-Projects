@@ -6,6 +6,7 @@ let tr = document.createElement('tr');
 let td = document.createElement('td');
 let deleteButton = document.createElement('button');
 let editButton = document.createElement('button')
+// Animal properties
 let name = document.createElement('div');
 let species = document.createElement('div');
 let age = document.createElement('div');
@@ -16,6 +17,7 @@ let basking_area_temp = document.createElement('div');
 let cold_part_temp = document.createElement('div');
 let humidity = document.createElement('div');
 let additional_info = document.createElement('div');
+// Edit Form inputs and buttons
 let editForm = document.createElement('form');
 let submit = document.createElement('input'); 
 let nameInput = document.createElement('input');
@@ -28,6 +30,7 @@ let baskingAreaTempInput = document.createElement('input');
 let coldPartTempInput = document.createElement('input');
 let humidityInput = document.createElement('input');
 let additionalInfoInput = document.createElement('input');
+// Edit modal creation
 let modal = document.createElement('div');
 let modalDialog = document.createElement('div');
 let modalContent = document.createElement('div');
@@ -44,7 +47,7 @@ let coldPartTempLabel = document.createElement('label');
 let humidityLabel = document.createElement('label');
 let additionalInfoLabel = document.createElement('label');
 
-
+// Class and data setting
 tr.setAttribute('data-id', doc.id);
 name.textContent = `name: ${doc.data().name}`
 deleteButton.textContent = 'Delete';
@@ -105,7 +108,7 @@ dietInput.setAttribute('class','form-control')
 
 
 
-
+//Visualizing the table
 td.appendChild(species);
 td.append(age);
 td.append(last_fed);
@@ -157,9 +160,9 @@ modalContent.append(span)
 modalContent.append(h2)
 td.append(modal)
 modalContent.append(editForm)
-
-
 animalList.appendChild(tr);
+
+// Firebase operations
 
 //deleting data
 deleteButton.addEventListener('click', (event) => {
