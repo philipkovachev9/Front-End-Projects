@@ -36,7 +36,7 @@ let modalDialog = document.createElement('div');
 let modalContent = document.createElement('div');
 let span = document.createElement('span');
 let h2 = document.createElement('h2');
-let nameLabel = document.createElement('label')
+let nameLabel = document.createElement('label');
 let speciesLabel = document.createElement('label');
 let ageLabel = document.createElement('label');
 let lastFedLabel = document.createElement('label');
@@ -49,30 +49,30 @@ let additionalInfoLabel = document.createElement('label');
 
 // Class and data setting
 tr.setAttribute('data-id', doc.id);
-name.textContent = `name: ${doc.data().name}`
+name.textContent = `name: ${doc.data().name}`;
 deleteButton.textContent = 'Delete';
 deleteButton.setAttribute('class','btn btn-danger');
 editButton.textContent = 'Edit';
 editButton.setAttribute('class', 'btn btn-info');
-editForm.setAttribute('class', 'form-group')
+editForm.setAttribute('class', 'form-group');
 modal.setAttribute('id','editModal');
 modal.setAttribute('class','modal ');
-modal.setAttribute('tabindex', '-1')
-modalDialog.setAttribute('class', 'modal-dialog')
+modal.setAttribute('tabindex', '-1');
+modalDialog.setAttribute('class', 'modal-dialog');
 modalContent.setAttribute('class','modal-content container');
 span.textContent = 'X';
 span.setAttribute('class','close');
 h2.textContent = 'Edit Animal';
-speciesLabel.innerHTML = 'Species:'
-nameLabel.innerHTML = 'Name:'
-ageLabel.textContent = 'Age:'
-lastFedLabel.textContent='Last Fed:'
-lastShedLabel.textContent= 'Last Shed:'
-dietLabel.textContent = 'Diet:'
-baskingAreaTempLabel.textContent = 'Basking temps'
-coldPartTempLabel.textContent = 'Cold Part Temps'
-humidityLabel.textContent = 'Humidity'
-additionalInfoInput.textContent = 'Additional Info'
+speciesLabel.innerHTML = 'Species:';
+nameLabel.innerHTML = 'Name:';
+ageLabel.textContent = 'Age:';
+lastFedLabel.textContent='Last Fed:';
+lastShedLabel.textContent= 'Last Shed:';
+dietLabel.textContent = 'Diet:';
+baskingAreaTempLabel.textContent = 'Basking temps';
+coldPartTempLabel.textContent = 'Cold Part Temps';
+humidityLabel.textContent = 'Humidity';
+additionalInfoInput.textContent = 'Additional Info';
 species.textContent = `species: ${doc.data().species}`;
 age.textContent = `age: ${doc.data().age}`;
 last_fed.textContent = `last fed: ${doc.data().last_fed}`;
@@ -84,29 +84,27 @@ humidity.textContent = `humidity: ${doc.data().humidity}`;
 additional_info.textContent = `additional info: ${doc.data().additional_info}`;
 editForm.setAttribute('method',"post");
 editForm.setAttribute('action',"#");
-editForm.setAttribute('class','edit-form')
+editForm.setAttribute('class','edit-form');
 submit.setAttribute('type',"submit");
 submit.setAttribute('value',"Update");
 submit.setAttribute('class',"btn btn-success");
-nameLabel.setAttribute('for','name')
-speciesLabel.setAttribute('for','name')
-ageLabel.setAttribute('for','name')
-lastFedLabel.setAttribute('for','')
-lastShedLabel.setAttribute('for','last shed')
-dietLabel.setAttribute('for','diet')
+nameLabel.setAttribute('for','name');
+speciesLabel.setAttribute('for','name');
+ageLabel.setAttribute('for','name');
+lastFedLabel.setAttribute('for','');
+lastShedLabel.setAttribute('for','last shed');
+dietLabel.setAttribute('for','diet');
 nameInput.setAttribute('class','form-control')
-speciesInput.setAttribute('class','form-control')
-ageSpecies.setAttribute('class','form-control')
-lastFedInput.setAttribute('class','form-control')
-lastShedInput.setAttribute('class','form-control')
-baskingAreaTempInput.setAttribute('class','form-control')
-coldPartTempInput.setAttribute('class','form-control')
-humidityInput.setAttribute('class','form-control')
-additionalInfoInput.setAttribute('class','form-control')
-speciesInput.setAttribute('class','form-control')
-dietInput.setAttribute('class','form-control')
-
-
+speciesInput.setAttribute('class','form-control');
+ageSpecies.setAttribute('class','form-control');
+lastFedInput.setAttribute('class','form-control');
+lastShedInput.setAttribute('class','form-control');
+baskingAreaTempInput.setAttribute('class','form-control');
+coldPartTempInput.setAttribute('class','form-control');
+humidityInput.setAttribute('class','form-control');
+additionalInfoInput.setAttribute('class','form-control');
+speciesInput.setAttribute('class','form-control');
+dietInput.setAttribute('class','form-control');
 
 //Visualizing the table
 td.appendChild(species);
@@ -129,37 +127,37 @@ td.append(baskingAreaTempInput);
 td.append(coldPartTempInput);
 td.append(humidityInput);
 // td.append(additionalInfoInput);
-td.append(speciesInput)
+td.append(speciesInput);
 tr.appendChild(td);
-editForm.append(nameLabel)
+editForm.append(nameLabel);
 editForm.appendChild(nameInput);
-editForm.append(ageLabel)
+editForm.append(ageLabel);
 editForm.append(ageSpecies);
-editForm.append(lastFedLabel)
+editForm.append(lastFedLabel);
 editForm.append(lastFedInput);
-editForm.append(lastShedLabel)
+editForm.append(lastShedLabel);
 editForm.append(lastShedInput);
 editForm.append(dietLabel);
 editForm.append(dietInput);
-editForm.append(baskingAreaTempLabel)
+editForm.append(baskingAreaTempLabel);
 editForm.append(baskingAreaTempInput);
-editForm.append(coldPartTempLabel)
+editForm.append(coldPartTempLabel);
 editForm.append(coldPartTempInput);
-editForm.append(humidityLabel)
+editForm.append(humidityLabel);
 editForm.append(humidityInput);
-editForm.append(additionalInfoLabel)
+editForm.append(additionalInfoLabel);
 // editForm.append(additionalInfoInput);
-editForm.append(speciesLabel)
-editForm.append(speciesInput)
-editForm.append(submit)
+editForm.append(speciesLabel);
+editForm.append(speciesInput);
+editForm.append(submit);
 td.append(editForm);
 tr.appendChild(td);
-modal.append(modalDialog)
+modal.append(modalDialog);
 modalDialog.append(modalContent);
-modalContent.append(span)
-modalContent.append(h2)
-td.append(modal)
-modalContent.append(editForm)
+modalContent.append(span);
+modalContent.append(h2);
+td.append(modal);
+modalContent.append(editForm);
 animalList.appendChild(tr);
 
 // Firebase operations
