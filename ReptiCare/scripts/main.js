@@ -29,6 +29,7 @@ let coldPartTempInput = document.createElement('input');
 let humidityInput = document.createElement('input');
 let additionalInfoInput = document.createElement('input');
 let modal = document.createElement('div');
+let modalDialog = document.createElement('div');
 let modalContent = document.createElement('div');
 let span = document.createElement('span');
 let h2 = document.createElement('h2');
@@ -53,6 +54,8 @@ editButton.setAttribute('class', 'btn btn-info');
 editForm.setAttribute('class', 'form-group')
 modal.setAttribute('id','editModal');
 modal.setAttribute('class','modal ');
+modal.setAttribute('tabindex', '-1')
+modalDialog.setAttribute('class', 'modal-dialog')
 modalContent.setAttribute('class','modal-content container');
 span.textContent = 'X';
 span.setAttribute('class','close');
@@ -148,7 +151,8 @@ editForm.append(speciesInput)
 editForm.append(submit)
 td.append(editForm);
 tr.appendChild(td);
-modal.append(modalContent);
+modal.append(modalDialog)
+modalDialog.append(modalContent);
 modalContent.append(span)
 modalContent.append(h2)
 td.append(modal)
