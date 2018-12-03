@@ -48,7 +48,7 @@ let humidityLabel = document.createElement('label');
 let additionalInfoLabel = document.createElement('label');
 
 // Class and data setting
-tr.setAttribute('data-id', doc.id);
+td.setAttribute('data-id', doc.id);
 name.textContent = `name: ${doc.data().name}`;
 deleteButton.textContent = 'Delete';
 deleteButton.setAttribute('class','btn btn-danger');
