@@ -163,10 +163,11 @@ animalList.appendChild(tr);
 // Firebase operations
 
 //deleting data
-deleteButton.addEventListener('click', (event) => {
-    event.stopPropagation();
+deleteButton.addEventListener('click', () => {
     let id = event.target.parentElement.getAttribute('data-id');
     db.collection('animals').doc(id).delete();
+    document.location.reload();
+
 })
 
 editButton.addEventListener('click', () => {
