@@ -33,3 +33,26 @@ img {
 h1 {
   text-align: center;
 }
+
+#player > img {
+ margin-left: 250px;
+ border: solid 3px black;
+ width: 80px;
+ height: 80px;
+ padding: 15px;
+ margin-left: 200px;
+ margin: 0 auto;
+ float: right;
+}
+
+#player:hover {
+  cursor: pointer;
+}
+
+input {
+width: 500px;
+height: 40px;
+margin-left: 450px;
+margin-top: 250px;
+font-size: 40px;
+}
