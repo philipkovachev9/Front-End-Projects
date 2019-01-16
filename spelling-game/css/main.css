@@ -27,7 +27,7 @@ body {
   cursor: pointer;
 }
 
-h1 {
+h1,h2, article {
   text-align: center;
 }
 
