@@ -1,29 +1,18 @@
-var words = [
-  {
-    word: 'horse',
-    sound: '../sounds/Horse-neigh.mp3'
-  },
-  {
-    word: 'goat',
-    sound: '../sounds/Goat-noise.mp3'
-  },
-  {
-    word: 'bear',
-    sound: '../sounds/grizzlybear.mp3'
-  },
+var sounds = [
+  new Audio('../sounds/Horse-neigh.mp3'),
+  new Audio('../sounds/grizzlybear.mp3'),
+  new Audio('../sounds/Goat-noise.mp3'),
 ]
 
 var player = document.getElementById('player');
 var enteredWord = document.getElementById('entered-word');
 
-//Todo: Make element play random sounds onclick
+//Todo: Make a function that plays one random mp3 from the array and check if the input matches the animal
 player.addEventListener('click', function() {
- words.forEach(element => {
-  alert(element.sound) 
- });
+  var sound = sounds[Math.floor(Math.random() * sounds.length)];
+  sound.play();
 })
 
-//Todo: check if the entered word matches the sound
 enteredWord.addEventListener('keydown', function() {
   if(event.key === 'Enter') {
     alert(enteredWord.value);        
