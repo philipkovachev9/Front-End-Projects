@@ -1,0 +1,53 @@
+body {
+  background-image: url('/images/game-menu-background.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 800px;
+  position: relative;
+}
+
+img {
+  height: 90px;
+}
+
+.help {
+  border: solid 1px black;
+  height: 55px;
+  width: 55px;
+  float: right;
+  margin-right: 20px;
+  background-color: #F0B442;
+}
+
+.help:hover {
+  cursor: pointer;
+}
+
+.question-mark {
+  text-align: center;
+  font-weight: bold;
+  font-size: 45px;
+  margin-top: 3px;
+}
+
+.spelling-game-icon {
+  border: solid 2px black;
+  width: 250px;
+  height: 250px;
+  margin-top: 60px;
+  background-image: url('../images/spelling-game-icon.jpg');
+}
+
+.spelling-game-icon:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+}
