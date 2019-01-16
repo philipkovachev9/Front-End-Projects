@@ -1,0 +1,13 @@
+body {
+  background-image: url('/images/level-menu-background.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 800px;
+  position: relative;
+}
+
+img {
+  height: 90px;
+}
