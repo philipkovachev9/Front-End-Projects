@@ -12,7 +12,7 @@ img {
   height: 90px;
 }
 
-.spelling-game-img {
+.guess-the-animal-game-img {
   height: 100px;
   margin-left: 50px;
 }
@@ -39,13 +39,13 @@ img {
 
 .guess-the-animal-game-icon {
   border: solid 2px black;
-  width: 270px;
+  width: 250px;
   height: 250px;
   margin-top: 60px;
   background-color: white;
 }
 
-.guess-the-animal-game-icon:hover {
+.spelling-game-icon:hover {
   cursor: pointer;
 }
 
