@@ -10,24 +10,21 @@
 
 </head>
 <body>
-  <a href="./game-menu.html">
-  <img src="../images/back-sign.png">
-  </a>
+  <a href="./game-menu.html"><img src="../images/back-sign.png"></a>
   <div class="help">
       <p class="question-mark trigger">?</p>
       <div class="modal">
           <div class="modal-content">
               <span class="close-button">&times;</span>
-             <h1> Click on the note icon below to hear a sound, then try to guess it by typing the animals name</h1>
+             <h1> Click on the note icon to hear a sound, then try to guess it by typing the animals name</h1>
           </div>
       </div>
-      <div id="player" onclick="playRandomAnimal()">
-          <img src="../images/note.png">
-         </div>
     </div>
     <div class="input">
-      <input type="text" autofocus id="entered-word">
+    <div id="player"><img src="../images/note.png"></div>
+      <input type="text" autofocus id="entered-word" placeholder="Guess the animal sound">
     </div>
+    <div id="counter">Score:<span id="counter-score"> 0</span> </div>
     <script src="../scripts/help-modal.js"></script>
     <script src="../scripts/guess-the-animal.js"></script>
 </body>
