@@ -17,7 +17,7 @@ var player = document.getElementById('player');
 var enteredWord = document.getElementById('entered-word');
 var counter = document.getElementById('counter-score');
 
-window.onload = function startGame() {
+
   player.addEventListener('click', function() {
     var sound = sounds[Math.floor(Math.random()*sounds.length)];
     sound['sound'].play();
@@ -31,4 +31,3 @@ window.onload = function startGame() {
     }
   })
 
-}
