@@ -1,0 +1,85 @@
+body {
+ background-image: url('../images/spelling-game-background.jpg');
+ background-size: cover; 
+ background-position: center;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+
+img {
+  height: 90px;
+}
+
+.help {
+  border: solid 1px black;
+  height: 55px;
+  width: 55px;
+  margin-right: 20px;
+  background-color: #F0B442; 
+  position:absolute;
+  top:0;
+  right:0;
+  margin-top: 10px;
+}
+
+.help:hover {
+  cursor: pointer;
+}
+
+.question-mark {
+  text-align: center;
+  font-weight: bold;
+  font-size: 45px;
+  margin-top: 3px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#player > img {
+ border: solid 3px black;
+ width: 80px;
+ height: 80px;
+ padding: 15px;
+ margin: 0 auto;
+ margin-left: 200px;
+ margin-top: -95px;
+ margin-left: 340px;
+}
+
+#player:hover {
+  cursor: pointer;
+}
+
+#counter {
+ margin: 0 auto;
+ margin-left: 200px;
+ margin-top: -290px;
+ margin-left: 540px;
+ font-size: 70px;
+ font-weight: bold;
+ position: fixed;
+}
+
+input {
+width: 500px;
+height: 40px;
+margin-left: 450px;
+margin-top: 150px;
+font-size: 40px;
+}
+
+#error-message {
+  display: none;
+  height: 350px;
+  width: 300px;
+}
+
+.input-error-border {
+  border: solid red 5px;
+}
+
+#counter-score {
+  margin-left: 12px;
+}

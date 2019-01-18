@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/guess-the-animal.css">
+  <link rel="stylesheet" href="../css/secondary-modal.css">
+  <title>Guess the animal game</title>
+
+</head>
+<body>
+  <a href="./game-menu.html"><img src="../images/back-sign.png"></a>
+  <div class="help">
+      <p class="question-mark trigger">?</p>
+      <div class="modal">
+          <div class="modal-content">
+              <span class="close-button">&times;</span>
+             <h1> Click on the note icon to hear a sound, then try to guess it by typing the animals name.</h1>
+          </div>
+      </div>
+    </div>
+    <div class="input">
+    <div id="player"><img src="../images/note.png"></div>
+      <input type="text" autofocus id="entered-word" placeholder="Guess the animal sound" >
+    </div>
+    <div id="counter">Score:<span id="counter-score"> 0</span> </div>
+    <img src="../images/wrong-choice-image.png" id="error-message">
+    <script src="../scripts/guess-the-animal.js"></script>
+    <script src="../scripts/help-modal.js"></script>
+</body>
+</html>
