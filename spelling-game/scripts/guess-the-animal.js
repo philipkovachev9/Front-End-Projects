@@ -18,6 +18,7 @@ var enteredWord = document.getElementById('entered-word');
 var counter = document.getElementById('counter-score');
 var errorMessage = document.getElementById('error-message');
 
+
 startGame();
 
 function startGame() {
@@ -33,7 +34,12 @@ function startGame() {
     if(event.key === 'Enter') {
       if(enteredWord.value === currentSound) {
         counter.textContent ++;
-      }
+        errorMessage.style.display = 'none';
+        enteredWord.classList.remove('input-error-border');
+      } else {
+        errorMessage.style.display = 'inline-block';
+        enteredWord.classList.add('input-error-border');
+      } 
     }
   })
 }

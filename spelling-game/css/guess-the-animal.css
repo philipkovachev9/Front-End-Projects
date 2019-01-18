@@ -72,10 +72,10 @@ font-size: 40px;
 
 #error-message {
   display: none;
+  height: 350px;
+  width: 300px;
 }
 
-.show {
-  display: flex;
-  color: red;
-  font-size: 30px;
+.input-error-border {
+  border: solid red 5px;
 }
