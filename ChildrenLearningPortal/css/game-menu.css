@@ -15,6 +15,7 @@ img {
 .guess-the-animal-game-img {
   height: 100px;
   margin-left: 50px;
+  margin-top: 20px;
 }
 
 .help {
@@ -62,12 +63,12 @@ h1,h2 {
   display: none;
   font-size: 20px;
   color: black;
-  padding: 5px;
+  padding: 3px;
   height: 120px;
   width: 320px;
   background-color: #D2EBEF;
   margin-left: 250px;
-  margin-top: 90px;
+  margin-top: 69px;
 }
 
 .guess-the-animal-game-icon:hover .tooltip {
