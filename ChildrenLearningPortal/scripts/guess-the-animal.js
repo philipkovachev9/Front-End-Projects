@@ -43,6 +43,7 @@ var counter = document.getElementById('counter-score');
 var errorMessage = document.getElementById('error-message');
 var wrongAnswerSound = new Audio('../sounds/Wrong-answer-sound-effect.mp3');
 
+
 function startGame() {
     var currentSound;
     player.addEventListener('click', function() {
@@ -63,7 +64,7 @@ function startGame() {
         errorMessage.style.display = 'inline-block';
         enteredWord.classList.add('input-error-border');
         wrongAnswerSound.play();
-      } 
+      }  
     } 
   })
 }
