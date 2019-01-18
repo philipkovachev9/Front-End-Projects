@@ -69,3 +69,13 @@ margin-left: 450px;
 margin-top: 150px;
 font-size: 40px;
 }
+
+#error-message {
+  display: none;
+}
+
+.show {
+  display: flex;
+  color: red;
+  font-size: 30px;
+}
