@@ -42,30 +42,32 @@ var enteredWord = document.getElementById('entered-word');
 var counter = document.getElementById('counter-score');
 var errorMessage = document.getElementById('error-message');
 var wrongAnswerSound = new Audio('../sounds/Wrong-answer-sound-effect.mp3');
+var isEntered = false;
 
 function startGame() {
-    var currentSound;
+  var currentSound;
     player.addEventListener('click', function() {
     var sound = sounds[Math.floor(Math.random()*sounds.length)];
     currentSound = sound.animalType;
     sound['sound'].play();
   })
-
-
-  enteredWord.addEventListener('keydown', function() {
+    
+  enteredWord.addEventListener('keyup', function() {
     if(event.key === 'Enter') {
       if(enteredWord.value.toLowerCase() === currentSound) {
+        isEntered = true;
         counter.textContent ++;
         errorMessage.style.display = 'none';
         enteredWord.classList.remove('input-error-border');
       } else {
+        isEntered = false;
         errorMessage.style.display = 'inline-block';
         enteredWord.classList.add('input-error-border');
         wrongAnswerSound.play();
+        guessedAnimal = false;
       }  
     } 
   })
 }
   
 startGame();
-
