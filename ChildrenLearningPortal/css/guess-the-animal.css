@@ -95,7 +95,7 @@ font-size: 40px;
 }
 
 
-#reload-page {
+#reload-page, #back-to-game-menu {
   width: 140px;
   height: 30px;
   display: block;
@@ -105,6 +105,15 @@ font-size: 40px;
   font-size: 20px;
 }
 
-#reload-page:hover {
+#back-to-game-menu {
+  height: 70px;
+  margin-top: 10px;
+}
+
+#reload-page:hover, #back-to-game-menu:hover {
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }

@@ -12,7 +12,7 @@ img {
   height: 90px;
 }
 
-.guess-the-animal-game-img {
+.guess-the-animal-game-img, .basic-math-game-icon {
   height: 100px;
   margin-left: 50px;
   margin-top: 20px;
@@ -38,7 +38,7 @@ img {
   margin-top: 3px;
 }
 
-.guess-the-animal-game-icon {
+.guess-the-animal-game-icon,.basic-math-game-icon {
   border: solid 2px black;
   width: 250px;
   height: 250px;
@@ -46,7 +46,9 @@ img {
   background-color: white;
 }
 
-.spelling-game-icon:hover {
+
+
+.spelling-game-icon:hover, .basic-math-game-icon {
   cursor: pointer;
 }
 
@@ -77,4 +79,18 @@ h1 {
 
 .guess-the-animal-game-icon:hover .tooltip {
   display: block;
+}
+
+.basic-math-game-icon:hover .tooltip {
+  display:  block;
+  height: 150px;
+}
+
+.game-grid {
+  display: flex;
+}
+
+.under-construction-message {
+  color: red;
+  text-align: center;
 }
