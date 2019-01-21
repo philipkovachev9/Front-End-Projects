@@ -24,6 +24,7 @@
   width: 600px;
   line-height: 30px;
 }
+
 .close-button {
   float: right;
   width: 1.5rem;
@@ -34,7 +35,6 @@
   color: red;
   font-weight: 900;
 }
-
 
 .show-modal {
   opacity: 1;

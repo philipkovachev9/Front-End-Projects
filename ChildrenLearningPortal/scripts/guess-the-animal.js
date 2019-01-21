@@ -41,8 +41,11 @@ var player = document.getElementById('player');
 var enteredWord = document.getElementById('entered-word');
 var counter = document.getElementById('counter-score');
 var errorMessage = document.getElementById('error-message');
+var playAgainButton = document.getElementById('win-message');
 var wrongAnswerSound = new Audio('../sounds/Wrong-answer-sound-effect.mp3');
+var winSound = new Audio('../sounds/win-sound.mp3');
 var guessedAnimal = false;
+var correctGuesses = 0;
 
 function startGame() {
   var currentSound;
@@ -57,10 +60,17 @@ function startGame() {
     if(event.key === 'Enter') {
       if(enteredWord.value.toLowerCase() === currentSound) {
         guessedAnimal = true;
+        correctGuesses +=1;
+        console.log(correctGuesses);
         counter.textContent ++;
         errorMessage.style.display = 'none';
         enteredWord.classList.remove('input-error-border');
         enteredWord.disabled = true;
+        if(correctGuesses === 9) {
+        document.getElementById('win-message').style.display = 'block';
+        player.style.display = 'none'
+        winSound.play();
+        }
       } else {
         errorMessage.style.display = 'inline-block';
         enteredWord.classList.add('input-error-border');
@@ -69,6 +79,10 @@ function startGame() {
       }  
     } 
   })
+
+playAgainButton.addEventListener('click', function() {
+location.reload();
+})
 }
   
 startGame();

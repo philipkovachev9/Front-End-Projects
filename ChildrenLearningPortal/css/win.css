@@ -1,0 +1,12 @@
+body {
+  background-image: url('/images/win-page.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 100px;
+}

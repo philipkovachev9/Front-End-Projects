@@ -83,3 +83,28 @@ font-size: 40px;
 #counter-score {
   margin-left: 12px;
 }
+
+#win-message {
+  height: 550px;
+  width: 850px;
+  background-color: red;
+  margin: 0 auto;
+  padding: 20px;
+  display: none;
+  background-image: url('../images/win-page.jpg')
+}
+
+
+#reload-page {
+  width: 140px;
+  height: 30px;
+  display: block;
+  margin : 0 auto;
+  background-color: #6D98B8;
+  color: white;
+  font-size: 20px;
+}
+
+#reload-page:hover {
+  cursor: pointer;
+}
