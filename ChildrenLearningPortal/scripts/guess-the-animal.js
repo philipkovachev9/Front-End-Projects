@@ -56,8 +56,8 @@ function startGame() {
     enteredWord.disabled = false;
   })
     
-  enteredWord.addEventListener('keyup', function() {
-    if(event.key === 'Enter') {
+  enteredWord.addEventListener('keyup', function(event) {
+    if(event.keyCode === 13) {
       if(enteredWord.value.toLowerCase() === currentSound) {
         guessedAnimal = true;
         correctGuesses +=1;
