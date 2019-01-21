@@ -42,7 +42,7 @@ var enteredWord = document.getElementById('entered-word');
 var counter = document.getElementById('counter-score');
 var errorMessage = document.getElementById('error-message');
 var wrongAnswerSound = new Audio('../sounds/Wrong-answer-sound-effect.mp3');
-var isEntered = false;
+var guessedAnimal = false;
 
 function startGame() {
   var currentSound;
@@ -50,21 +50,22 @@ function startGame() {
     var sound = sounds[Math.floor(Math.random()*sounds.length)];
     currentSound = sound.animalType;
     sound['sound'].play();
+    enteredWord.disabled = false;
   })
     
   enteredWord.addEventListener('keyup', function() {
     if(event.key === 'Enter') {
       if(enteredWord.value.toLowerCase() === currentSound) {
-        isEntered = true;
+        guessedAnimal = true;
         counter.textContent ++;
         errorMessage.style.display = 'none';
         enteredWord.classList.remove('input-error-border');
+        enteredWord.disabled = true;
       } else {
-        isEntered = false;
         errorMessage.style.display = 'inline-block';
         enteredWord.classList.add('input-error-border');
+        enteredWord.disabled = false;
         wrongAnswerSound.play();
-        guessedAnimal = false;
       }  
     } 
   })
