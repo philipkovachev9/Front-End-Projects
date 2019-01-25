@@ -12,8 +12,11 @@
         <td>{{customer.mobile}}</td>
         <td>
           <button class="btn btn-info" (click)="customerService.populateForm(customer)">Edit</button>
-          <button class="btn btn-danger">Delete</button>
+          <button class="btn btn-danger" (click)="onDelete(customer.$key)">Delete</button>
         </td>
     </tr>
   </ng-container>
 </table>
+<div class="alert alert-danger" *ngIf="showDeleteMessage">
+  Deleted successfully
+</div>
