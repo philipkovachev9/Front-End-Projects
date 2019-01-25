@@ -19,6 +19,16 @@ export class CustomerService {
   });
 
   getCustomers() {
-    this.customerList = this.firebase.list('customers')
+    this.customerList = this.firebase.list('customers');
+    return this.customerList.snapshotChanges();
+  }
+
+  insertCustomer(customer) {
+    this.customerList.push({
+      fullName: customer.fullName,
+      email: customer.email,
+      mobile: customer.mobile,
+      location: customer.location
+    });
   }
 }
