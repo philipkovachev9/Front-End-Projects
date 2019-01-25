@@ -10,7 +10,7 @@ var sounds = [
   {
     animalType: 'goat',
     sound: new Audio('../sounds/Goat-noise.mp3'),
-  },
+  }, 
   {
     animalType: 'cat',
     sound: new Audio('../sounds/cat.mp3')
@@ -48,41 +48,43 @@ var guessedAnimal = false;
 var correctGuesses = 0;
 
 function startGame() {
-  var currentSound;
+    var currentSound;
     player.addEventListener('click', function() {
-    var sound = sounds[Math.floor(Math.random()*sounds.length)];
+    var sound = sounds[Math.floor(Math.random() * sounds.length)];
     currentSound = sound.animalType;
     sound['sound'].play();
     enteredWord.disabled = false;
   })
-    
+
+
   enteredWord.addEventListener('keyup', function(event) {
     if(event.keyCode === 13) {
       if(enteredWord.value.toLowerCase() === currentSound) {
         guessedAnimal = true;
-        correctGuesses +=1;
-        console.log(correctGuesses);
+        correctGuesses += 1;
         counter.textContent ++;
         errorMessage.style.display = 'none';
         enteredWord.classList.remove('input-error-border');
         enteredWord.disabled = true;
         if(correctGuesses === 9) {
         document.getElementById('win-message').style.display = 'block';
-        player.style.display = 'none'
+        player.style.display = 'none';
         winSound.play();
         }
+        
       } else {
         errorMessage.style.display = 'inline-block';
         enteredWord.classList.add('input-error-border');
         enteredWord.disabled = false;
+        counter.textContent --;
         wrongAnswerSound.play();
       }  
     } 
   })
 
 playAgainButton.addEventListener('click', function() {
-location.reload();
-})
+   location.reload();
+  })
 }
   
 startGame();
