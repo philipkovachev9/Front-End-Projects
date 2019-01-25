@@ -24,6 +24,10 @@ export class CustomerComponent implements OnInit {
    this.showSuccessMessage = true;
    setTimeout(()=> this.showSuccessMessage = false, 3000)
    this.submitted = false;
+   this.customerService.form.reset();
+     } else {
+      this.customerService.updateCustomer(this.customerService.form.value);
+
      }
     }
   }
