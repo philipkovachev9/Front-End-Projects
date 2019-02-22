@@ -1,7 +1,11 @@
     const todoList = document.getElementById('todoList');
     const form = document.getElementById('form');
+    const input = document.getElementById('input');
+
 
     // Displaying the todos:
+     
+
     function displayTodos(doc) {
     let li = document.createElement('li');
     let task = document.createElement('span');
@@ -21,14 +25,21 @@
     let id = e.target.parentElement.getAttribute('data-id');
     db.collection('todos').doc(id).delete();
       });
-    }
+     }
+    
 
     // Adding the item to the database:
     form.addEventListener('submit', function(e) {
-    e.preventDefault();
+        e.preventDefault();
+    if(input.value !== '') {
     db.collection('todos').add({
     task: form.task.value
      });
+     input.classList.remove('error-message')
+    } else {
+     input.classList.add('error-message')
+     input.placeholder ='You must enter a todo!'
+    }
    });
 
    // Getting the data from the backend:

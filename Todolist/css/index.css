@@ -70,3 +70,7 @@ li {
     text-align: center;
     font-size: 30px;
 }
+
+.error-message {
+    border: solid 3px red;
+}
