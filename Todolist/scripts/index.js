@@ -1,26 +1,45 @@
-    var button = document.getElementById('add-button');
-    var count = 0;
+    const todoList = document.getElementById('todoList');
+    const form = document.getElementById('form');
 
-    button.addEventListener('click', function () {    
-    var item = document.getElementById('input').value;
-    var text = document.createTextNode(item);
-    var newItem = document.createElement('li');
-    newItem.appendChild(text);
-    document.getElementById('todoList').appendChild(newItem);
-    count++;
-    document.getElementById('counter').innerHTML = count;
+    // Displaying the todos:
+    function displayTodos(doc) {
+    let li = document.createElement('li');
+    let task = document.createElement('span');
+    let trashIcon = document.createElement('img');
     
-    var removeTask = document.createElement('img');
-    removeTask.setAttribute('src', './images/trash.jpg');
-    removeTask.setAttribute('id', 'trash');
-    removeTask.addEventListener('click', function() {
-        newItem.parentNode.removeChild(newItem);
-        count--;
-        document.getElementById('counter').innerHTML = count;
+    li.setAttribute('data-id', doc.id);
+    task.textContent = doc.data().task;
+    li.appendChild(task);
+    li.appendChild(trashIcon);
+    todoList.appendChild(li);
+    trashIcon.setAttribute('src', './images/trash.jpg');
+    trashIcon.setAttribute('id', 'trash');
+
+    // Deleting the todos:
+    trashIcon.addEventListener('click', function(e) {
+    e.stopPropagation();
+    let id = e.target.parentElement.getAttribute('data-id');
+    db.collection('todos').doc(id).delete();
+      });
+    }
+
+    // Adding the item to the database:
+    form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    db.collection('todos').add({
+    task: form.task.value
+     });
+   });
+
+   // Getting the data from the backend:
+   db.collection('todos').onSnapshot(function (snapshot) {
+    let changes = snapshot.docChanges();
+    changes.forEach(change => {
+      if(change.type == 'added') {
+        displayTodos(change.doc);
+        } else if(change.type =='removed') {
+            let li = todoList.querySelector('[data-id=' + change.doc.id + ']');
+            todoList.removeChild(li);
+        }
+      });
     });
-    newItem.appendChild(removeTask);
-});
-
-    
- 
-    

@@ -3,24 +3,39 @@
 
 <head>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <title>Todo list</title>
+    <title>Todo list with Firebase Backend</title>
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
     <div class="header">
-        <form>
-            <h2>Todo App</h2>
+        <form id="form">
+            <h2>Todo App With Firebase </h2>
             <p>Add a new todo</p>
-            <input type="text" id="input" placeholder="Enter an activity......">
-            <button type="button" id="add-button">Add Task</button>
+            <input type="text" id="input" name="task" placeholder="Enter an activity......">
+            <button id="add-btn">Add Task</button>
         </form>
     </div>
     <ul id="todoList">
         <h1>Things to do:
-            <span id="counter">0</span>
+            <!-- <span id="counter">0</span> -->
         </h1>
     </ul>
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-firestore.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBAXlwmCxv_DA1Lt40Jf_Fe22AdtrSvnWU",
+        authDomain: "todo-app-53986.firebaseapp.com",
+        databaseURL: "https://todo-app-53986.firebaseio.com",
+        projectId: "todo-app-53986",
+        storageBucket: "todo-app-53986.appspot.com",
+        messagingSenderId: "85078067046"
+      };
+      firebase.initializeApp(config);
+      const db = firebase.firestore();
+    </script>
     <script src="./scripts/index.js"></script>
 </body>
 

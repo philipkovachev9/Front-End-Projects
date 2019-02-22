@@ -11,6 +11,10 @@
     float: right;
 }
 
+#trash:hover {
+ cursor: pointer;
+}
+
 .header {
     background-color: #4696E5;
     height: 300px;
@@ -25,6 +29,7 @@ form {
 h2, p {
     color: white;
     text-align: center;
+    padding: 6px;
 }
 
 #input {
@@ -43,6 +48,10 @@ button {
     border: solid;
     margin-left: 430px;
     border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 h1 {
