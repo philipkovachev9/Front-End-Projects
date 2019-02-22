@@ -10,14 +10,18 @@
     let li = document.createElement('li');
     let task = document.createElement('span');
     let trashIcon = document.createElement('img');
+    let editIcon = document.createElement('img');
     
     li.setAttribute('data-id', doc.id);
     task.textContent = doc.data().task;
     li.appendChild(task);
     li.appendChild(trashIcon);
+    li.appendChild(editIcon);
     todoList.appendChild(li);
     trashIcon.setAttribute('src', './images/trash.jpg');
-    trashIcon.setAttribute('id', 'trash');
+    trashIcon.setAttribute('class', 'crud-icon-trash');
+    editIcon.setAttribute('src', '../images/edit.png')
+    editIcon.setAttribute('class', 'crud-icon-edit')
 
     // Deleting the todos:
     trashIcon.addEventListener('click', function(e) {
@@ -49,8 +53,10 @@
       if(change.type == 'added') {
         displayTodos(change.doc);
         } else if(change.type =='removed') {
-            let li = todoList.querySelector('[data-id=' + change.doc.id + ']');
+            let li = todoList.querySelector('[data-id="' + change.doc.id + '"]');
             todoList.removeChild(li);
         }
       });
     });
+
+    
