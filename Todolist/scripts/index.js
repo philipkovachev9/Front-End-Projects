@@ -1,11 +1,9 @@
     const todoList = document.getElementById('todoList');
     const form = document.getElementById('form');
     const input = document.getElementById('input');
-
-
+ 
     // Displaying the todos:
      
-
     function displayTodos(doc) {
     let li = document.createElement('li');
     let task = document.createElement('span');
@@ -30,7 +28,6 @@
     db.collection('todos').doc(id).delete();
       });
      }
-    
 
     // Adding the item to the database:
     form.addEventListener('submit', function(e) {
@@ -59,4 +56,3 @@
       });
     });
 
-    
