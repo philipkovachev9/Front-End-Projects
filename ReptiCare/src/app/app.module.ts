@@ -10,6 +10,9 @@ import { AddNewAnimalComponent } from './add-new-animal/add-new-animal.component
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AnimalsService } from './animals.service';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -25,9 +28,11 @@ import { AnimalsService } from './animals.service';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [AnimalsService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

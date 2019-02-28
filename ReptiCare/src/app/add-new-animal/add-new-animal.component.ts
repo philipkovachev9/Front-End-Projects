@@ -9,13 +9,21 @@ import { AnimalsService } from '../animals.service';
 export class AddNewAnimalComponent implements OnInit {
 
   constructor(private animalsService: AnimalsService) { }
+  submitted: boolean;
+  formContols = this.animalsService.form.controls;
 
   ngOnInit() {
   }
   
   onSubmit() {
-    if(this.animalsService.form.get('$key').value === null) {
+    this.submitted = true;
+    if(this.animalsService.form.valid) {
+      // if(this.animalsService.form.get('$key').value === null) {
       
+      // } else {
+  
+      // }
+      this.submitted = false;
     }
   }
 }
