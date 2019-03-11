@@ -8,14 +8,14 @@
     <label>Animal Name</label>
    <input formControlName="animalName" class="form-control" [ngClass]="{'is-invalid': submitted && formControl.animalName.errors}">
    <div class="invalid-feedback" *ngIf="submitted && formControl.animalName.errors">
-    This field is required
+    Each animal must have a name
    </div>
     </div>
     <div class="form-group">
     <label>Species</label>
     <input formControlName="species" class="form-control" [ngClass]="{'is-invalid': submitted && formControl.animalName.errors}">
     <div class="invalid-feedback" *ngIf="submitted && formControl.animalName.errors">
-    This field is required
+    Each animal must be registered by species
    </div>
     </div>
     <div class="form-group">
@@ -33,7 +33,7 @@
     <label>Diet</label>
     <input formControlName="diet" class="form-control" [ngClass]="{'is-invalid': submitted && formControl.animalName.errors}">
     <div class="invalid-feedback" *ngIf="submitted && formControl.animalName.errors">
-      This field is required
+      Each animal's diet must be known
      </div>
      </div>
      <div class="form-group">

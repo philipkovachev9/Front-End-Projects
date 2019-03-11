@@ -22,4 +22,21 @@ export class AnimalsService {
     diet: new FormControl('', Validators.required),
     comments: new FormControl('')
   });
+
+  getAnimals() {
+    this.animalList = this.firebase.list('animals');
+    return this.animalList.snapshotChanges();
+  }
+
+  insertAnimal(animal) {
+    this.animalList.push({
+      animalName: animal.animalName,
+      species: animal.species,
+      age: animal.age,
+      lastFed: animal.lastFed,
+      lastShed: animal.lastShed,
+      diet: animal.diet,
+      comments: animal.comments
+    });
+  }
 }

@@ -12,7 +12,7 @@ export class AnimalBoardComponent implements OnInit {
   constructor(public animalService: AnimalsService) {  }
 
   ngOnInit() {
-  
+   this.animalService.getAnimals();
   }
 
 }
