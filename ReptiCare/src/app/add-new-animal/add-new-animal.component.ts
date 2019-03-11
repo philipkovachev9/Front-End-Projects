@@ -10,7 +10,7 @@ export class AddNewAnimalComponent implements OnInit {
 
   constructor(private animalsService: AnimalsService) { }
   submitted: boolean;
-  formContols = this.animalsService.form.controls;
+  formControl = this.animalsService.form.controls;
 
   ngOnInit() {
   }
@@ -18,11 +18,6 @@ export class AddNewAnimalComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     if(this.animalsService.form.valid) {
-      // if(this.animalsService.form.get('$key').value === null) {
-      
-      // } else {
-  
-      // }
       this.submitted = false;
     }
   }

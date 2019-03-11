@@ -2,15 +2,21 @@
   <h1>Add a new animal </h1>
 <div class="row">
   <div class="col-md-5">
-   <form [formGroup]="this.animalsService.form">
+   <form [formGroup]="animalsService.form" (ngSubmit)="onSubmit()">
   <input type="hidden" formControlName="$key">
   <div class="form-group">
     <label>Animal Name</label>
-   <input formControlName="animalName" class="form-control">
+   <input formControlName="animalName" class="form-control" [ngClass]="{'is-invalid': submitted && formControl.animalName.errors}">
+   <div class="invalid-feedback" *ngIf="submitted && formControl.animalName.errors">
+    This field is required
+   </div>
     </div>
     <div class="form-group">
     <label>Species</label>
-    <input formControlName="species" class="form-control">
+    <input formControlName="species" class="form-control" [ngClass]="{'is-invalid': submitted && formControl.animalName.errors}">
+    <div class="invalid-feedback" *ngIf="submitted && formControl.animalName.errors">
+    This field is required
+   </div>
     </div>
     <div class="form-group">
     <label>Age</label>
@@ -25,7 +31,10 @@
     <input type="date" formControlName="lastShed" class="form-control">
     </div> <div class="form-group">
     <label>Diet</label>
-    <input formControlName="diet" class="form-control">
+    <input formControlName="diet" class="form-control" [ngClass]="{'is-invalid': submitted && formControl.animalName.errors}">
+    <div class="invalid-feedback" *ngIf="submitted && formControl.animalName.errors">
+      This field is required
+     </div>
      </div>
      <div class="form-group">
      <label>Comments</label>
@@ -35,6 +44,9 @@
     <input type="submit" class="btn btn-primary" value="Submit">
     </div>
     </form>
+    <div class="alert alert-info" *ngIf="succesMessage">
+      Submitted successfully.
+    </div>
   </div>
 </div>
 </div>
