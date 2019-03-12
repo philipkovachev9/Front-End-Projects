@@ -10,9 +10,14 @@ import { AnimalsService } from '../animals.service';
 export class AnimalBoardComponent implements OnInit {
 
   constructor(public animalService: AnimalsService) {  }
+  animalsArray = [];
 
   ngOnInit() {
-   this.animalService.getAnimals();
+    this.animalService.getAnimals().subscribe(
+      list => {
+        
+      }
+    );
   }
-
+   
 }

@@ -26,6 +26,7 @@ export class AddNewAnimalComponent implements OnInit {
       this.succesMessage = true;
       setTimeout(() => this.succesMessage = false, 3000);
       this.submitted = false;
+      this.animalsService.form.reset();
       }
     }
   }
