@@ -8,22 +8,25 @@ import { AnimalsService } from '../animals.service';
 })
 export class AddNewAnimalComponent implements OnInit {
 
-  constructor(private animalsService: AnimalsService) { }
+  constructor(public animalsService: AnimalsService) { }
   submitted: boolean;
   succesMessage: boolean;
+  failMessage: boolean;
   formControl = this.animalsService.form.controls;
 
   ngOnInit() {
-  
-  }
-  
+    this.animalsService.getAnimals();
+   }
+    
   onSubmit() {
     this.submitted = true;
     if(this.animalsService.form.valid) {
-      if(this.animalsService.form.get('$key').value == null)
+      if(this.animalsService.form.get('$key').value == null){
+      this.animalsService.insertAnimal(this.animalsService.form.value);
       this.succesMessage = true;
       setTimeout(() => this.succesMessage = false, 3000);
       this.submitted = false;
+      }
     }
   }
 }

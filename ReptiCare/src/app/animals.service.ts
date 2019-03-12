@@ -8,10 +8,10 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
 export class AnimalsService {
 
-  constructor(public firebase: AngularFireDatabase) {
+  constructor(public firebase: AngularFireDatabase) {}
 
-  }
   animalList: AngularFireList<any>
+
   form = new FormGroup({
     $key: new FormControl(null),
     animalName: new FormControl('', Validators.required),
@@ -29,7 +29,7 @@ export class AnimalsService {
   }
 
   insertAnimal(animal) {
-    this.animalList.push({
+     this.animalList.push({
       animalName: animal.animalName,
       species: animal.species,
       age: animal.age,
