@@ -8,7 +8,7 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
 export class AnimalsService {
 
-  constructor(public firebase: AngularFireDatabase) {}
+  constructor(private firebase: AngularFireDatabase) {}
 
   animalList: AngularFireList<any>
 

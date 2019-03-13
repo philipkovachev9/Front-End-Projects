@@ -9,15 +9,18 @@ import { AnimalsService } from '../animals.service';
 })
 export class AnimalBoardComponent implements OnInit {
 
-  constructor(public animalService: AnimalsService) {  }
+  constructor(private animalService: AnimalsService) {}
   animalsArray = [];
 
   ngOnInit() {
     this.animalService.getAnimals().subscribe(
       list => {
-        
-      }
-    );
+        this.animalsArray = list.map(item => {
+          return {
+            $key: item.key,
+            ...item.payload.val()
+          }
+        });
+      });
   }
-   
 }

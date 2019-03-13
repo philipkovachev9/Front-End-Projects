@@ -1,3 +1,24 @@
-<p>
-  animal-board works!
-</p>
+<table class="table table-success table-bordered table-sm">
+  <thead>
+    <th>Animal Name</th>
+    <th>Species</th>
+    <th>Age</th>
+    <th>Last Fed</th>
+    <th>Last Shed</th>
+    <th>Diet</th>
+    <th>Comments</th>
+  </thead>
+  <tr *ngFor="let animal of animalsArray">
+    <td>{{animal.animalName}}</td>
+    <td>{{animal.species}}</td>
+    <td>{{animal.age}}</td>
+    <td>{{animal.lastFed}}</td>
+    <td>{{animal.lastShed}}</td>
+    <td>{{animal.diet}}</td>
+    <td>{{animal.comments}}</td>
+    <td>
+      <button class="btn btn-info">Edit</button>
+      <button class="btn btn-danger">Delete</button>
+    </td>
+  </tr>
+</table>
