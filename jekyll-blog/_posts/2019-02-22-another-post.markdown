@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Another Post"
+date:   2019-02-22 14:55:31 +0200
+categories: jekyll update
+author: 'Philip'
+---
+
+Another post!
