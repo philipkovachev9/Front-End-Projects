@@ -1,0 +1,75 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+h1, p {
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+header {
+  background: url('/assets/images/astrology-header.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 777px;
+}
+
+.heading {
+  background:rgba(255, 255, 255, 0.219);
+  opacity: 11;
+  filter: alpha(opacity=50);
+  height: 128px;
+  margin-top: 35px;
+}
+
+.heading-text {
+  padding: 45px;
+}
+
+button {
+  margin: auto;
+  display: block;
+  height: 52px;
+  width: 220px;
+  margin-top: 45px;
+  background-color: white;
+  cursor: pointer;
+}
+
+nav {
+  float: right;
+  list-style: none;
+  margin-top: 30px;
+}
+
+.nav-a {
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+}
+
+.rss-subscribe {
+  display: none;
+}
+
+.first-section {
+  margin-top: 50px;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.second-seciton {
+  margin-top: 150px;
+  background-image: url('/assets/images/section-2.png');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 800px;
+}
