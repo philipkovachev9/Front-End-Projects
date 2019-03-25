@@ -91,10 +91,12 @@ footer {
 .contact {
   float: left;
   padding: 25px;
+  margin-top: -90px;
 }
 
 .follow {
   float: right;
   margin-top: 90px;
   margin-right: 25px;
+  margin-top: -2px;
 }
