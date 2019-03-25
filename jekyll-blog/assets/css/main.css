@@ -5,7 +5,7 @@
 }
 
 
-h1, p {
+h1, h2, p, .home, .post-link {
   color: white;
   text-align: center;
   padding: 5px;
@@ -72,4 +72,29 @@ nav {
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 800px;
+}
+
+footer {
+  background-image: url('/assets/images/footer-img.jpeg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 721px;
+}
+
+.articles {
+  text-align: center;
+  background:rgb(79, 0, 127, 0.679);
+  height: 376px;
+}
+
+.contact {
+  float: left;
+  padding: 25px;
+}
+
+.follow {
+  float: right;
+  margin-top: 90px;
+  margin-right: 25px;
 }
