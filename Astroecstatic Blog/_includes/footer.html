@@ -1,7 +1,12 @@
 <footer>
     <section class="articles">
+        <br>
+        <br>
+        <br>
        <h1>MORE ARTICLES</h1>
-        {{content}}
+       {% for item in site.posts %}
+       <a href="{{item.url}}"><h2>{{item.title}}</h2></a>
+       {% endfor %}
         <div class="contact">
             <button>CONTACT ME</button>
             <h2>Astroecstatic</h2>
