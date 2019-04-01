@@ -5,7 +5,7 @@
 }
 
 
-h1, h2, p, .home, .post-link {
+h1, h2, h3, p, .home, .post-link {
   color: white;
   text-align: center;
   padding: 5px;
@@ -108,4 +108,23 @@ footer {
 
 .post-list-heading {
   display: none;
+}
+
+.test-img {
+  height: 239px;
+  width: 256px;
+  margin: 15px;
+}
+
+.image-container {
+  margin: 0 auto;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.read-more-btn {
+  width: 111px;
+  height: 36px;
 }
