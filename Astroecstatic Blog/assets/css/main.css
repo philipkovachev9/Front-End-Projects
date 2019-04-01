@@ -1,4 +1,4 @@
-* {
+ * {
   margin: 0px;
   padding: 0px;
   font-family: 'Roboto', sans-serif;
@@ -139,16 +139,18 @@ input[type="submit"] {
   border-radius: 50px;
   border-color: black;
   margin-top: 50px;
+  outline-width: 0;
+  margin: 18px;
 }
 
 .zodiac-info {
   width: 500px;
-  display: flex;
+  /* display: flex;
   justify-content: center;
+  align-items: center; */
 }
 
 .blog-entry-name {
-  color: red;
   padding: 0px;
 }
 
@@ -158,5 +160,10 @@ input[type="submit"] {
 
 .blog-entry-container {
   margin-top: 100px;
- float: left;
+  margin-left: 250px;
+}
+
+.search-container {
+  width: 851px;
+  margin: 0 auto;
 }
