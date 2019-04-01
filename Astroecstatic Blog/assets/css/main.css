@@ -128,3 +128,35 @@ footer {
   width: 111px;
   height: 36px;
 }
+
+input[type="submit"] {
+  font-family: FontAwesome;
+}
+
+.search-box {
+  width: 851px;
+  height: 25px;
+  border-radius: 50px;
+  border-color: black;
+  margin-top: 50px;
+}
+
+.zodiac-info {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.blog-entry-name {
+  color: red;
+  padding: 0px;
+}
+
+.zodiac-paragraph {
+ color: black;
+}
+
+.blog-entry-container {
+  margin-top: 100px;
+ float: left;
+}
