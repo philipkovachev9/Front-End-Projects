@@ -1,3 +1,28 @@
+---
+---
+// Color variables:
+$white: white;
+
+// Mixins:
+@mixin background-img($url, $height) {
+  background: url($url);
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: $height;
+}
+
+@mixin astro-button() {
+  margin: auto;
+  display: block;
+  height: 52px;
+  width: 220px;
+  margin-top: 45px;
+  background-color: $white;
+  cursor: pointer;
+}
+
  * {
   margin: 0px;
   padding: 0px;
@@ -6,18 +31,13 @@
 
 
 h1, h2, h3, p, .home, .post-link {
-  color: white;
+  color: $white;
   text-align: center;
   padding: 5px;
 }
 
 header {
-  background: url('/assets/images/astrology-header.jpg');
-  background-size: cover; 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 777px;
+ @include background-img('../images/astrology-header.jpg',777px );
 }
 
 .heading {
@@ -33,13 +53,7 @@ header {
 }
 
 button {
-  margin: auto;
-  display: block;
-  height: 52px;
-  width: 220px;
-  margin-top: 45px;
-  background-color: white;
-  cursor: pointer;
+ @include astro-button();
 }
 
 nav {
@@ -49,7 +63,7 @@ nav {
 }
 
  a {
-  color: white;
+  color: $white;
   text-decoration: none;
   margin: 15px;
 }
@@ -65,26 +79,19 @@ nav {
 }
 
 .second-seciton {
-  margin-top: 150px;
-  background-image: url('/assets/images/section-2.png');
-  background-size: cover; 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 800px;
+  @include background-img('../images/section-2.png',800px );
 }
 
 footer {
-  background-image: url('/assets/images/footer-img.jpeg');
-  background-size: cover; 
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 721px;
+  @include background-img('../images/footer-img.jpeg',721px );
+
 }
 
 .articles {
   text-align: center;
-  background:rgb(79, 0, 127, 0.679);
+  background:rgba(79, 0, 127, 0.679);
+  opacity: 11;
+  filter: alpha(opacity=50);
   height: 376px;
 }
 
@@ -145,9 +152,6 @@ input[type="submit"] {
 
 .zodiac-info {
   width: 500px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 .blog-entry-name {
@@ -166,4 +170,8 @@ input[type="submit"] {
 .search-container {
   width: 851px;
   margin: 0 auto;
+}
+
+.blog-entry {
+ display: flex;
 }
