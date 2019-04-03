@@ -29,7 +29,6 @@ $white: white;
   font-family: 'Roboto', sans-serif;
 }
 
-
 h1, h2, h3, p, .home, .post-link {
   color: $white;
   text-align: center;
@@ -76,6 +75,7 @@ nav {
   margin-top: 50px;
   font-weight: 900;
   font-size: 20px;
+  padding: 20px;
 }
 
 .second-seciton {
@@ -151,27 +151,64 @@ input[type="submit"] {
 }
 
 .zodiac-info {
-  width: 500px;
-}
-
-.blog-entry-name {
-  padding: 0px;
-}
-
-.zodiac-paragraph {
- color: black;
-}
-
-.blog-entry-container {
-  margin-top: 100px;
-  margin-left: 250px;
-}
-
-.search-container {
-  width: 851px;
-  margin: 0 auto;
+  margin: 100px auto 0;
+  padding: 0 20px;
 }
 
 .blog-entry {
- display: flex;
+  display: flex;
+  margin-top: 20px;
+}
+
+.blog-entry img {
+  flex-shrink: 0;
+  height: 120px;
+  width: 120px;
+}
+
+.blog-detail {
+  color: black;
+  margin-left: 10px;
+}
+
+.blog-detail label {
+  font-weight: bold;
+}
+
+.blog-detail p {
+  margin: 5px 0;
+}
+
+.blog-detail small {
+  font-style: italic;
+}
+
+.blog-detail p {
+  color: black;
+}
+
+.sign-archetypes {
+  float: right;
+}
+
+.signs-heading {
+  color: black;
+  text-align: center;
+}
+
+.sign-icon {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+}
+
+.sign-icons-first-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  float: right;
+}
+
+.sign-paragraph {
+  color: black;
 }
