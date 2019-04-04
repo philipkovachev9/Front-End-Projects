@@ -1,5 +1,6 @@
 ---
 title: Planets in aspects
+layout: post
 ---
 # Planets in aspects
 

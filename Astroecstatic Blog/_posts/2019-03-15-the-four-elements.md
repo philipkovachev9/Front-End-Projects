@@ -1,5 +1,6 @@
 ---
 title: The four elements
+layout: post
 ---
 # The four elements
 

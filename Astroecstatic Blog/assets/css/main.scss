@@ -1,5 +1,6 @@
 ---
 ---
+
 // Color variables:
 $white: white;
 
@@ -202,11 +203,12 @@ input[type="submit"] {
   margin: 10px;
 }
 
-.sign-icons-first-column {
+.sign-icons-column {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   float: right;
+  margin: 20px;
 }
 
 .sign-paragraph {
