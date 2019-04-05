@@ -11,6 +11,7 @@ $white: white;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  width: 100%;
   height: $height;
 }
 
@@ -149,16 +150,18 @@ input[type="submit"] {
   margin-top: 50px;
   outline-width: 0;
   margin: 18px;
+  margin-left: 120px;
 }
 
 .zodiac-info {
   margin: 100px auto 0;
-  padding: 0 20px;
+  height: 1400px;
 }
 
 .blog-entry {
   display: flex;
   margin-top: 20px;
+  padding: 90px;
 }
 
 .blog-entry img {
@@ -195,6 +198,8 @@ input[type="submit"] {
 .signs-heading {
   color: black;
   text-align: center;
+  text-transform: uppercase;
+
 }
 
 .sign-icon {
@@ -214,3 +219,24 @@ input[type="submit"] {
 .sign-paragraph {
   color: black;
 }
+
+.planets-heading-container {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.planets-heading {
+  color: black;
+}
+
+@media only screen and (max-width : 321px) {
+  .heading-text {
+     color: red;
+   }
+  }
+
+h3 {
+  text-align: center;
+
+}
+
