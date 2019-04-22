@@ -1,6 +1,6 @@
 ---
-title: Astrological Houses
 layout: post
+title: Astrological Houses
 ---
 # Astrological Houses
 

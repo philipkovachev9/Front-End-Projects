@@ -29,7 +29,11 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-
+sass:
+  sass_dir: _sass
+  style: compressed
+future: true 
+published: true
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
