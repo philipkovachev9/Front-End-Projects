@@ -15,7 +15,7 @@ $white: white;
   height: $height;
 }
 
-@mixin astro-button() {
+@mixin book-a-reading-button() {
   margin: auto;
   display: block;
   height: 52px;
@@ -39,28 +39,17 @@ h1, h2, h3, p, .home, .post-link, .more-articles {
 
 header {
  @include background-img('../images/astrology-header.jpg',777px );
+ display:inline-block
 }
 
-.heading {
-  background:rgba(255, 255, 255, 0.219);
-  opacity: 11;
-  filter: alpha(opacity=50);
-  height: 128px;
-  margin-top: 35px;
-}
-
-.heading-text {
-  padding: 45px;
-}
 
 button {
- @include astro-button();
+ @include book-a-reading-button();
 }
 
 nav {
-  float: right;
-  list-style: none;
-  margin-top: 30px;
+  text-align: center;
+  margin-top: 200px;
 }
 
  a {
