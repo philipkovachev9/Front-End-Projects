@@ -11,8 +11,24 @@
   <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
-{% include header.html %}
-  <h1>Hi</h1>
-{% include footer.html %}
+  {% include header.html %}
+  <main>
+      <div class="reading-container">
+          <h1 class="post-title"></h1>{% for post in site.posts limit: 5 %}</h1> 
+           <a href="">{{post.title}}</a>
+           <br>
+           <span class="post-date">{{post.date | date_to_long_string}}</span>
+           <article>
+              <img src="{{site.baseurl}}/assets/images/{{post.image}}"> 
+               {{ post.excerpt  }}
+               
+              <button class="read-more-btn">Read more</button>
+           </article>
+         </ul>
+         {% endfor %}
+        </div>
+    {% include footer.html %}
+      </main>
+    
 </body>
 </html>

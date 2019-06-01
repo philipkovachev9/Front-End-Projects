@@ -27,13 +27,20 @@ $white: white;
   border: solid 1px;
 }
 
- * {
+  html, body {
   margin: 0px;
   padding: 0px;
+  height:100%;
   font-family: 'Roboto', sans-serif;
  }
+
+ body {
+  height:100%;
+  margin:0;
+  padding:0;
+ }
  
- .title,h1,.header-p {
+ .title, .header-p {
   color: $white;
   text-align: center;
   padding: 15px;
@@ -43,7 +50,21 @@ $white: white;
   color: white;
 }
 
-.footer-heading {
+.first-column, .second-column {
+  flex-direction: column;
+}
+
+
+.astro-heading {
+  color: #660D77;
+}
+
+.purple-line {
+  background-color: #660D77;
+  height: 1px;
+}
+
+.footer-heading, .astro-heading {
   text-transform: uppercase;
   margin-left: 13px;
 }
@@ -86,10 +107,11 @@ button {
 }
 
 
- a {
-  color: $white;
+ nav > a {
+   color: $white;
   text-decoration: none;
   margin: 15px;
+  width: 145px;
 }
 
 .footer-nav > a {
@@ -100,11 +122,17 @@ button {
   display: none;
 }
 
-
-footer {
-  @include background-img('../images/footer-img.jpeg',721px);
-  display:inline-block;
+main {
+ 
 }
+.reading-container {
+  margin-left: 220px;
+  width: 500px;
+}
+footer {
+  @include background-img('../images/footer-img.jpeg',50%); 
+}
+
 
 .row {
   display: flex;
@@ -115,13 +143,18 @@ footer {
 
 .column {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-basis: 100%;
   flex: 1;
 }
 
+.content {
+  position:relative;
+}
+
 .second-widget {
   height: 100px;
+  width: 250px
 }
 
 .first-widget {
@@ -138,5 +171,48 @@ footer {
 .copyright {
  text-align: center;
  color: white;
- margin-top: 150px;
+ margin-top: 190px;
+}
+
+.submit-subscription-button:hover {
+  cursor: pointer;
+}
+
+img {
+  height: 200px;
+  width: 250px;
+}
+
+.readings {
+  display: flex;
+  flex-direction: column;
+}
+
+.reading-container > a {
+  color: #660D77;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+
+article {
+ width: 350px;
+}
+
+article > img {
+  float: left;
+}
+.post-date {
+  font-weight: bold;
+}
+
+.read-more-btn {
+  height: 30px;
+  width: 100px;
+  background-color: #660D77;
+  margin-top: 2px;
+}
+
+.w {
+  float: right;
 }
